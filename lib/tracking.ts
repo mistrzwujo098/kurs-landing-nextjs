@@ -92,7 +92,7 @@ export async function trackEvent(
   // Server-side tracking via Cloudflare Workers
   if (trackingConfig.workerUrl) {
     try {
-      await fetch(trackingConfig.workerUrl, {
+      await fetch(`${trackingConfig.workerUrl}/event`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

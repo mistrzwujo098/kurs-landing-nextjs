@@ -27,6 +27,10 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Program Ósmoklasisty 2025 - Paulina od Matematyki',
   description: 'Zdaj Egzamin Ósmoklasisty z Matmy na ponad 80% bez stresu i drogich korepetycji',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/icon.png',
+  },
 }
 
 export const viewport: Viewport = {

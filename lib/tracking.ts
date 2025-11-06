@@ -98,7 +98,7 @@ export async function trackEvent(
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          project_id: trackingConfig.projectId,
+          projectId: trackingConfig.projectId,
           event: fullEventData,
         }),
       })

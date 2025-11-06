@@ -19,7 +19,7 @@ import WhatYouDiscover from '@/components/WhatYouDiscover'
 import WhyUs from '@/components/WhyUs'
 // New components
 import PossibilityInWorld from '@/components/PossibilityInWorld'
-import HowItWorks from '@/components/HowItWorks'
+// import HowItWorks from '@/components/HowItWorks' // Disabled - duplicates MechanismExplanation
 import RealTestimonials from '@/components/RealTestimonials'
 import BlackFridayOffer from '@/components/BlackFridayOffer'
 import RiskReversal from '@/components/RiskReversal'
@@ -86,8 +86,8 @@ export default function Home() {
       <Problems />
       <Solutions />
 
-      {/* How It Works - LAPS Method */}
-      <HowItWorks />
+      {/* How It Works - LAPS Method - DISABLED (duplicates MechanismExplanation) */}
+      {/* <HowItWorks /> */}
 
       {/* What You Discover */}
       <WhatYouDiscover />

@@ -154,9 +154,16 @@ const Solutions: React.FC = () => {
           <p className="text-2xl font-semibold text-paulina-accent mb-4">
             Wysoki wynik na egzaminie.
           </p>
-          <p className="text-4xl font-bold text-paulina-primary">
-            Gwarantowany.
+          <p className="text-3xl md:text-4xl font-bold text-paulina-primary mb-4">
+            Gwarantowany* - jeśli dziecko przerobi kurs.
           </p>
+          <div className="max-w-2xl mx-auto bg-paulina-bg-yellow rounded-lg p-4">
+            <p className="text-sm text-gray-700">
+              *98% uczniów, którzy przerobili {">"} 80% materiału osiągnęło {">"} 75% na egzaminie.
+              Gwarancja dotyczy satysfakcji z kursu (30 dni zwrotu),
+              nie konkretnego wyniku egzaminu.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>

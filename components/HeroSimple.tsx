@@ -30,19 +30,14 @@ const HeroSimple: React.FC = () => {
               <span className="text-sm font-semibold text-gray-700">Program zgodny z CKE 2026</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-xl sm:text-3xl md:text-5xl font-bold text-paulina-primary leading-tight mb-6">
-              <span className="whitespace-nowrap">Jak ponad 20 000 uczniów</span>{' '}
-              <span className="whitespace-nowrap">zdało egzamin ósmoklasisty</span>
-              <span className="block text-paulina-accent mt-2 sm:mt-3">
-                <span className="whitespace-nowrap">na średnio 84%</span>{' '}
-                <span className="whitespace-nowrap">bez korepetycji</span>
-              </span>
+            {/* Main Headline - Skrócony */}
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-paulina-primary leading-tight mb-6">
+              Metoda LAPS: <span className="text-paulina-accent">84% bez korepetycji</span>
             </h1>
 
-            {/* Subheadline */}
+            {/* Subheadline - Rozszerzony */}
             <p className="text-base sm:text-lg text-gray-700 mb-8">
-              <span className="font-bold text-paulina-primary">Metoda LAPS</span> - jedyny system, który sprawia, że
+              Sprawdzona przez <span className="font-bold text-paulina-primary">20 000 ósmoklasistów</span> metoda, która sprawia, że
               Twoje dziecko <span className="font-bold text-paulina-accent">samo chce się uczyć</span> tylko 15 minut dziennie
             </p>
 
@@ -138,6 +133,16 @@ const HeroSimple: React.FC = () => {
             </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-paulina-accent p-4 shadow-2xl" data-testid="sticky-cta">
+        <button
+          onClick={scrollToPricing}
+          className="w-full py-3 text-white font-bold text-lg rounded-full shadow-xl hover:bg-paulina-primary transition-all duration-300"
+        >
+          Zobacz Pakiety (98% wybiera Premium)
+        </button>
       </div>
     </section>
   );

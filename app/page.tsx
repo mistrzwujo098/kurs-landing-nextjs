@@ -7,7 +7,6 @@ import ParentTestimonials from '@/components/ParentTestimonials'
 import Problems from '@/components/Problems'
 import MechanismExplanation from '@/components/MechanismExplanation'
 import Solutions from '@/components/Solutions'
-import Testimonials from '@/components/Testimonials'
 import CourseContent from '@/components/CourseContent'
 import ObjectionHandling from '@/components/ObjectionHandling'
 import PricingSimple from '@/components/PricingSimple'
@@ -18,6 +17,12 @@ import CTAButton from '@/components/CTAButton'
 import ScrollProgress from '@/components/ScrollProgress'
 import WhatYouDiscover from '@/components/WhatYouDiscover'
 import WhyUs from '@/components/WhyUs'
+// New components
+import PossibilityInWorld from '@/components/PossibilityInWorld'
+import HowItWorks from '@/components/HowItWorks'
+import RealTestimonials from '@/components/RealTestimonials'
+import BlackFridayOffer from '@/components/BlackFridayOffer'
+import RiskReversal from '@/components/RiskReversal'
 import confetti from 'canvas-confetti'
 
 export default function Home() {
@@ -71,6 +76,9 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSimple />
 
+      {/* Possibility in World - Belief Shift Step 1 */}
+      <PossibilityInWorld />
+
       {/* Social Proof */}
       <ParentTestimonials />
 
@@ -78,10 +86,13 @@ export default function Home() {
       <Problems />
       <Solutions />
 
+      {/* How It Works - LAPS Method */}
+      <HowItWorks />
+
       {/* What You Discover */}
       <WhatYouDiscover />
 
-      {/* How it works */}
+      {/* Mechanism Explanation */}
       <MechanismExplanation />
 
       {/* Why Choose Us */}
@@ -90,8 +101,14 @@ export default function Home() {
       {/* Course Content */}
       <CourseContent />
 
-      {/* Testimonials */}
-      <Testimonials />
+      {/* Real Testimonials - 11 authentic reviews */}
+      <RealTestimonials />
+
+      {/* Black Friday Offer - Value Stacking + Countdown */}
+      <BlackFridayOffer />
+
+      {/* Risk Reversal - 30 Day Guarantee */}
+      <RiskReversal />
 
       {/* Pricing */}
       <PricingSimple />

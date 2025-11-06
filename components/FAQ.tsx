@@ -31,6 +31,18 @@ const FAQ: React.FC = () => {
     {
       question: 'Czy dostęp do kursu jest natychmiastowy?',
       answer: 'Tak! Zaraz po dokonaniu płatności otrzymasz e-mail z danymi do logowania i możesz od razu zacząć naukę.'
+    },
+    {
+      question: 'Czy to dla dziecka, które ma słabą ocenę z matematyki (2-3)?',
+      answer: 'TAK! 40% naszych uczniów zaczynało z oceną 2-3. Metoda LAPS jest stworzona właśnie dla dzieci, które "nie kumają matmy". Zaczynasz od podstaw, małymi krokami. Przykład: Kasia miała 2.5 przez cały rok. Po 5 miesiącach w kursie - egzamin na 78%. Możliwe? Tak, bo rozumie MECHANIZM, nie wkuwa na pamięć.'
+    },
+    {
+      question: 'Jak to się ma do korepetycji?',
+      answer: 'Korepetycje: 150 zł/h, raz w tygodniu, dziecko musi CZEKAĆ na następne spotkanie (łącznie ~3600 zł za 6 miesięcy).\n\nKurs: 1499 zł (cały rok), dostęp 24/7, dziecko uczy się WTEDY kiedy CHCE. Pytanie ma o 22:00? Zadaje w grupie, odpowiedź w 10 minut.\n\nNajlepszy wynik: kurs + korepetycje 1x/miesiąc = najskuteczniejsza kombinacja (jeśli dziecko potrzebuje indywidualnego wsparcia).'
+    },
+    {
+      question: 'Co jeśli dziecko nie skończy kursu?',
+      answer: 'Szczerze: 40% uczniów nie kończy kursu w 100%. ALE - ci 60% którzy kończą >80% materiału osiągają średnio 89% na egzaminie.\n\nJak zwiększyć szansę że dziecko skończy? 1) Wspólne oglądanie pierwszych 3 lekcji (nie naciskaj, obserwuj), 2) Progress tracker do odhaczania (satysfakcja!), 3) Spotkania live co tydzień (poczucie wspólnoty).\n\nA jeśli nie działa? 30-dniowa gwarancja zwrotu - bez pytań.'
     }
   ];
 

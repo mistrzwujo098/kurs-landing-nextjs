@@ -25,7 +25,7 @@ const MechanismExplanation: React.FC = () => {
         'Radość z odkrywania, nie męczenie się'
       ],
       parent_sees: 'Dziecko mówi "teraz rozumiem!" zamiast "nie wiem jak"',
-      science: 'Neuroplastyczność mózgu - gdy rozumiemy mechanizm, tworzymy silniejsze połączenia neuronowe.',
+      science: 'Neuroplastyczność mózgu - gdy rozumiemy mechanizm, mózg tworzy silniejsze połączenia neuronowe.',
       example: 'Równania nie są już zagadką - to logiczny puzzle, który dziecko potrafi ułożyć krok po kroku'
     },
     {

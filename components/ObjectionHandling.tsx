@@ -41,7 +41,7 @@ const ObjectionHandling: React.FC = () => {
       question: 'To za drogo, nie stać mnie na taki wydatek',
       concern: 'Cena kursu',
       icon: Wallet,
-      answer: 'Rozumiem! Dlatego oferujemy raty 0% - tylko 200 zł miesięcznie. To mniej niż 2 godziny korepetycji! Plus oszczędzasz średnio 3000 zł na korepetycjach.',
+      answer: 'Rozumiem! Dlatego oferuję raty 0% - tylko 200 zł miesięcznie. To mniej niż 2 godziny korepetycji! Plus oszczędzasz średnio 3000 zł na korepetycjach.',
       proof: 'Średni koszt przygotowania z korepetytorem to 3600 zł',
       guarantee: '30-dniowa gwarancja zwrotu, nawet po przerobieniu lekcji'
     },

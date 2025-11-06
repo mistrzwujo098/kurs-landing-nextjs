@@ -82,7 +82,7 @@ const TransformationJourney: React.FC = () => {
             do <span className="text-green-600">sukcesu</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Zobacz, jak zmienia się życie rodzin, które wybrały nasz system LAPS.
+            Zobacz, jak zmienia się życie rodzin, które wybrały mój system LAPS.
             Ta transformacja może stać się <span className="font-bold text-paulina-accent">Twoją historią</span>.
           </p>
         </motion.div>

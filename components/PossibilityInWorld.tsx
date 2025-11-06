@@ -35,13 +35,13 @@ const PossibilityInWorld: React.FC = () => {
     }
   ];
 
-  // Conditional animation variants - disable on mobile for faster LCP
+  // Conditional animation variants - ensure visibility when animations disabled
   const headerAnimation = shouldReduceMotion
-    ? {}
+    ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
     : { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
 
   const statAnimation = shouldReduceMotion
-    ? {}
+    ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
     : { initial: { opacity: 0, scale: 0.9 }, whileInView: { opacity: 1, scale: 1 }, viewport: { once: true }, transition: { duration: 0.5 } };
 
   return (
@@ -64,7 +64,7 @@ const PossibilityInWorld: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {stats.map((stat, index) => {
             const animation = shouldReduceMotion
-              ? {}
+              ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
               : { initial: { opacity: 0, scale: 0.9 }, whileInView: { opacity: 1, scale: 1 }, viewport: { once: true }, transition: { duration: 0.5, delay: index * 0.1 } };
 
             return (

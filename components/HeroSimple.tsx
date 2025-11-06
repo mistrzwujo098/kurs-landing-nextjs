@@ -10,13 +10,13 @@ import { useReducedMotion } from '@/hooks/useReducedMotion';
 const HeroSimple: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
-  // Use conditional animation variants
+  // Use conditional animation variants - ensure opacity: 1 when animations disabled
   const fadeIn = shouldReduceMotion
-    ? {}
+    ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
     : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } };
 
   const scaleIn = shouldReduceMotion
-    ? {}
+    ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
     : { initial: { opacity: 0, scale: 0.9 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.6, delay: 0.2 } };
 
   const scrollToPricing = () => {
@@ -74,25 +74,29 @@ const HeroSimple: React.FC = () => {
                 'Dziecko uczy się SAMO - koniec z wieczornymi kłótniami',
                 'Zaoszczędzisz 3600 zł (vs 6 miesięcy korepetycji)',
                 '30-dniowa gwarancja zwrotu bez pytań'
-              ].map((benefit, index) => (
+              ].map((benefit, index) => {
+                const benefitAnimation = shouldReduceMotion
+                  ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
+                  : { initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, transition: { delay: 0.3 + index * 0.1 } };
+
+                return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
+                  {...benefitAnimation}
                   className="flex items-center gap-3"
                 >
                   <CheckCircle className="text-paulina-accent flex-shrink-0" size={20} />
                   <span className="text-sm sm:text-base text-gray-700">{benefit}</span>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
 
             {/* CTA Button */}
             <motion.button
               onClick={scrollToPricing}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
+              whileTap={shouldReduceMotion ? {} : { scale: 0.95 }}
               className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-paulina-accent text-white font-bold rounded-full shadow-2xl transform transition-all duration-300 hover:bg-paulina-primary hover:shadow-3xl group"
             >
               <span className="text-base sm:text-lg">Zobacz pakiety i ceny</span>
@@ -121,7 +125,7 @@ const HeroSimple: React.FC = () => {
                 className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
               />
               
-              {/* Floating Stats */}
+              {/* Floating Stats - desktop only, keep animations */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -146,11 +150,11 @@ const HeroSimple: React.FC = () => {
         </div>
       </div>
 
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-paulina-accent p-4 shadow-2xl" data-testid="sticky-cta">
+      {/* Sticky Mobile CTA - white background with colored button */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t-2 border-gray-200 p-4 shadow-2xl" data-testid="sticky-cta">
         <button
           onClick={scrollToPricing}
-          className="w-full py-3 text-white font-bold text-lg rounded-full shadow-xl hover:bg-paulina-primary transition-all duration-300"
+          className="w-full py-3 bg-paulina-primary text-white font-bold text-lg rounded-full shadow-xl hover:bg-paulina-accent transition-all duration-300"
         >
           Zobacz Pakiety (98% wybiera Premium)
         </button>

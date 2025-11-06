@@ -39,30 +39,8 @@ export default function Home() {
 
     window.addEventListener('beforeunload', handleUnload)
 
-    // Exit intent detection
-    const handleMouseLeave = async (e: MouseEvent) => {
-      if (e.clientY <= 0) {
-        // User is leaving - show exit intent popup
-        const shouldShow = localStorage.getItem('exitIntentShown')
-        if (!shouldShow) {
-          localStorage.setItem('exitIntentShown', 'true')
-          // Lazy load confetti only when needed
-          const confetti = (await import('canvas-confetti')).default
-          confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-            colors: ['#571A47', '#EC9A4F', '#06AEEF']
-          })
-        }
-      }
-    }
-
-    document.addEventListener('mouseleave', handleMouseLeave)
-
     return () => {
       window.removeEventListener('beforeunload', handleUnload)
-      document.removeEventListener('mouseleave', handleMouseLeave)
     }
   }, [])
 

@@ -1,6 +1,28 @@
 import type { Metadata, Viewport } from 'next'
+import { Inter, Varela_Round, Montserrat } from 'next/font/google'
 import './globals.css'
 import TrackingScripts from '@/components/tracking/TrackingScripts'
+
+// Optimized font loading with next/font/google
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const varelaRound = Varela_Round({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-varela',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-montserrat',
+})
 
 export const metadata: Metadata = {
   title: 'Program Ósmoklasisty 2025 - Paulina od Matematyki',
@@ -17,12 +39,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pl">
+    <html lang="pl" className={`${varelaRound.variable} ${inter.variable} ${montserrat.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
         {/* MailerLite Universal */}
         <script
           dangerouslySetInnerHTML={{

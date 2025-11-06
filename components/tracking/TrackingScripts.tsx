@@ -23,7 +23,7 @@ export default function TrackingScripts() {
         <>
           <Script
             id="facebook-pixel"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 !function(f,b,e,v,n,t,s)
@@ -56,11 +56,11 @@ export default function TrackingScripts() {
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${trackingConfig.google.conversionId}`}
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
           <Script
             id="google-analytics"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -78,7 +78,7 @@ export default function TrackingScripts() {
         <>
           <Script
             id="tiktok-pixel"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 !function (w, d, t) {

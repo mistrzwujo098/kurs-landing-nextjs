@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Star, Shield, Users, CheckCircle, ChevronRight } from 'lucide-react';
 import { tracking } from '@/lib/tracking';
@@ -104,9 +105,13 @@ const HeroSimple: React.FC = () => {
             className="relative hidden md:block"
           >
             <div className="relative">
-              <img
+              <Image
                 src="https://paulinaodmatematyki.com/wp-content/uploads/2025/06/hero-1.webp"
                 alt="Paulina od Matematyki"
+                width={800}
+                height={800}
+                priority
+                sizes="(max-width: 768px) 0vw, (max-width: 1024px) 50vw, 400px"
                 className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
               />
               

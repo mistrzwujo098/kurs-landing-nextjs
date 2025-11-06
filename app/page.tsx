@@ -23,7 +23,6 @@ import PossibilityInWorld from '@/components/PossibilityInWorld'
 import RealTestimonials from '@/components/RealTestimonials'
 import BlackFridayOffer from '@/components/BlackFridayOffer'
 import RiskReversal from '@/components/RiskReversal'
-import confetti from 'canvas-confetti'
 
 export default function Home() {
   // Track user engagement
@@ -40,13 +39,14 @@ export default function Home() {
     window.addEventListener('beforeunload', handleUnload)
 
     // Exit intent detection
-    const handleMouseLeave = (e: MouseEvent) => {
+    const handleMouseLeave = async (e: MouseEvent) => {
       if (e.clientY <= 0) {
         // User is leaving - show exit intent popup
         const shouldShow = localStorage.getItem('exitIntentShown')
         if (!shouldShow) {
           localStorage.setItem('exitIntentShown', 'true')
-          // Trigger exit intent modal here
+          // Lazy load confetti only when needed
+          const confetti = (await import('canvas-confetti')).default
           confetti({
             particleCount: 100,
             spread: 70,

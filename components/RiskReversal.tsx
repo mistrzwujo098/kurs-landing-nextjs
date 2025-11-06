@@ -104,7 +104,7 @@ const RiskReversal: React.FC = () => {
               Dlaczego oferuję tę gwarancję?
             </h4>
             <p className="text-gray-700 mb-3">
-              Szczerze: Wiem, że kurs działa. <span className="font-bold">98% rodziców poleca kurs znajomym.</span> Zwroty zdarzają się rzadko ({"<"}5%).
+              Szczerze: Wiem, że kurs działa. <span className="font-bold">98% rodziców poleca kurs znajomym.</span> Zwroty zdarzają się rzadko ({"<"}2%).
             </p>
             <p className="text-gray-700">
               Ci co zwracają i tak by nie korzystali z kursu - oszczędzam czas na wsparciu dla niezadowolonych, a Ty masz spokój że nie ryzykujesz pieniędzy.

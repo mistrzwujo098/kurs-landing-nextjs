@@ -11,7 +11,7 @@ const RealTestimonials: React.FC = () => {
       role: "mama",
       rating: 5,
       quote: "Kursy są rewelacyjne! Moja córka uczyła się sama w trybie edukacji domowej korzystając tylko z kursu pani Pauliny (żadnych dodatkowych korepetycji!) i zdała egzamin ósmoklasisty na tak wysokim poziomie, że dostała się do jednego z najlepszych liceów w mieście. Szczerze polecam!",
-      result: "Dostanie do najlepszego liceum w mieście",
+      result: "Dostała się do najlepszego liceum w mieście",
       objection: "edukacja domowa"
     },
     {

@@ -13,7 +13,7 @@ const BlackFridayOffer: React.FC = () => {
   });
 
   useEffect(() => {
-    const deadline = new Date('2024-11-30T23:59:59').getTime();
+    const deadline = new Date('2025-11-30T23:59:59').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -128,7 +128,7 @@ const BlackFridayOffer: React.FC = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <Sparkles className="text-paulina-accent" size={32} />
             <h2 className="text-4xl md:text-5xl font-bold">
-              BLACK FRIDAY 2024
+              BLACK FRIDAY 2025
             </h2>
             <Sparkles className="text-paulina-accent" size={32} />
           </div>

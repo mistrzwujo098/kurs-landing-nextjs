@@ -3,8 +3,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 const PossibilityInWorld: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   const stats = [
     {
       icon: Users,
@@ -32,15 +35,21 @@ const PossibilityInWorld: React.FC = () => {
     }
   ];
 
+  // Conditional animation variants - disable on mobile for faster LCP
+  const headerAnimation = shouldReduceMotion
+    ? {}
+    : { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
+
+  const statAnimation = shouldReduceMotion
+    ? {}
+    : { initial: { opacity: 0, scale: 0.9 }, whileInView: { opacity: 1, scale: 1 }, viewport: { once: true }, transition: { duration: 0.5 } };
+
   return (
     <section id="possibility" className="py-16 bg-gradient-to-b from-paulina-bg-yellow to-white">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
+        {/* Header - LCP element optimized for mobile */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          {...headerAnimation}
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-paulina-primary mb-4">
@@ -53,13 +62,15 @@ const PossibilityInWorld: React.FC = () => {
 
         {/* Stats Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {stats.map((stat, index) => (
+          {stats.map((stat, index) => {
+            const animation = shouldReduceMotion
+              ? {}
+              : { initial: { opacity: 0, scale: 0.9 }, whileInView: { opacity: 1, scale: 1 }, viewport: { once: true }, transition: { duration: 0.5, delay: index * 0.1 } };
+
+            return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              {...animation}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center"
             >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-paulina-primary to-paulina-purple flex items-center justify-center">
@@ -75,15 +86,13 @@ const PossibilityInWorld: React.FC = () => {
                 {stat.detail}
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Main Content */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          {...headerAnimation}
           className="bg-white rounded-2xl p-8 md:p-12 shadow-xl"
         >
           <div className="max-w-4xl mx-auto">

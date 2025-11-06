@@ -111,7 +111,7 @@ const HeroSimple: React.FC = () => {
                 width={800}
                 height={800}
                 priority
-                sizes="(max-width: 768px) 0vw, (max-width: 1024px) 50vw, 400px"
+                unoptimized
                 className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
               />
               

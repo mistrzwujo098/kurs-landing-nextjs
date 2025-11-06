@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import HeroSimple from '@/components/HeroSimple'
 import RegistrationDeadline from '@/components/RegistrationDeadline'
 import ParentTestimonials from '@/components/ParentTestimonials'
@@ -8,21 +9,21 @@ import Problems from '@/components/Problems'
 import MechanismExplanation from '@/components/MechanismExplanation'
 import Solutions from '@/components/Solutions'
 import CourseContent from '@/components/CourseContent'
-import ObjectionHandling from '@/components/ObjectionHandling'
 import PricingSimple from '@/components/PricingSimple'
-import ComparisonTable from '@/components/ComparisonTable'
 import FAQ from '@/components/FAQ'
-import Footer from '@/components/Footer'
 import CTAButton from '@/components/CTAButton'
 import ScrollProgress from '@/components/ScrollProgress'
 import WhatYouDiscover from '@/components/WhatYouDiscover'
 import WhyUs from '@/components/WhyUs'
-// New components
 import PossibilityInWorld from '@/components/PossibilityInWorld'
-// import HowItWorks from '@/components/HowItWorks' // Disabled - duplicates MechanismExplanation
-import RealTestimonials from '@/components/RealTestimonials'
-import BlackFridayOffer from '@/components/BlackFridayOffer'
-import RiskReversal from '@/components/RiskReversal'
+
+// Lazy load components below fold for better LCP
+const RealTestimonials = dynamic(() => import('@/components/RealTestimonials'))
+const BlackFridayOffer = dynamic(() => import('@/components/BlackFridayOffer'))
+const RiskReversal = dynamic(() => import('@/components/RiskReversal'))
+const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'))
+const ObjectionHandling = dynamic(() => import('@/components/ObjectionHandling'))
+const Footer = dynamic(() => import('@/components/Footer'))
 
 export default function Home() {
   // Track user engagement

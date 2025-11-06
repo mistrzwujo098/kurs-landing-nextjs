@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { throttle } from '@/utils/throttle';
 
 const ScrollProgress: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -26,7 +27,7 @@ const ScrollProgress: React.FC = () => {
 
       // Determine active section
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section.id);
         if (element) {
@@ -39,10 +40,13 @@ const ScrollProgress: React.FC = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Throttle scroll event to max 1x per 100ms for performance
+    const throttledScroll = throttle(handleScroll, 100);
+
+    window.addEventListener('scroll', throttledScroll);
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener('scroll', throttledScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {

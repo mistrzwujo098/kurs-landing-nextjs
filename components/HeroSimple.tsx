@@ -5,8 +5,20 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Star, Shield, Users, CheckCircle, ChevronRight } from 'lucide-react';
 import { tracking } from '@/lib/tracking';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 const HeroSimple: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
+  // Use conditional animation variants
+  const fadeIn = shouldReduceMotion
+    ? {}
+    : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } };
+
+  const scaleIn = shouldReduceMotion
+    ? {}
+    : { initial: { opacity: 0, scale: 0.9 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.6, delay: 0.2 } };
+
   const scrollToPricing = () => {
     // Track button click
     tracking.viewContent('Hero CTA - Zobacz pakiety')
@@ -20,11 +32,7 @@ const HeroSimple: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div {...fadeIn}>
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-md mb-6">
               <Shield className="text-paulina-primary" size={16} />
@@ -99,9 +107,7 @@ const HeroSimple: React.FC = () => {
 
           {/* Right Column - Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            {...scaleIn}
             className="relative hidden md:block"
           >
             <div className="relative">

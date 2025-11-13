@@ -141,7 +141,7 @@ const PossibilityInWorld: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />
-                  <span><span className="font-bold">Natychmiastowa odpowiedź:</span> Rozwiązujesz zadanie → od razu wiesz czy dobrze (nie czekasz 3 dni na sprawdzonie)</span>
+                  <span><span className="font-bold">Natychmiastowa odpowiedź:</span> Rozwiązujesz zadanie → od razu wiesz czy dobrze (nie czekasz 3 dni na sprawdzenie)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />

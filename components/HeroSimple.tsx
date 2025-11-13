@@ -47,7 +47,7 @@ const HeroSimple: React.FC = () => {
             {/* Subheadline - Rozszerzony */}
             <p className="text-base sm:text-lg text-gray-700 mb-8">
               Sprawdzona przez <span className="font-bold text-paulina-primary">20 000 ósmoklasistów</span> metoda, która sprawia, że
-              Twoje dziecko <span className="font-bold text-paulina-accent">samo chce się uczyć</span> tylko 15 minut dziennie
+              <span className="font-bold text-paulina-accent">Wystarczy 20 minut dziennie</span>
             </p>
 
             {/* Social Proof */}

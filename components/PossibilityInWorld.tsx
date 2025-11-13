@@ -124,7 +124,7 @@ const PossibilityInWorld: React.FC = () => {
                     Systematyczna nauka małymi krokami
                   </h4>
                   <p className="text-gray-700">
-                    15 minut dziennie przez 6-8 miesięcy. <span className="font-bold text-green-600">Mózg ma czas na zrozumienie</span>. Wiedza buduje się powoli, ale zostaje na lata. Większość moich uczniów po roku pamięta więcej niż ci, którzy wkuwali na ostatnią chwilę.
+                    20 minut dziennie przez 6-8 miesięcy. <span className="font-bold text-green-600">Mózg ma czas na zrozumienie</span>. Wiedza buduje się powoli, ale zostaje na lata. Większość moich uczniów po roku pamięta więcej niż ci, którzy wkuwali na ostatnią chwilę.
                   </p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const PossibilityInWorld: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />
-                  <span><span className="font-bold">Natychmiastowa odpowiedź:</span> Rozwiązujesz zadanie → od razu wiesz czy dobrze (nie czekasz 3 dni na sprawdzone)</span>
+                  <span><span className="font-bold">Natychmiastowa odpowiedź:</span> Rozwiązujesz zadanie → od razu wiesz czy dobrze (nie czekasz 3 dni na sprawdzonie)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />

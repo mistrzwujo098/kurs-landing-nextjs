@@ -155,7 +155,7 @@ const HeroSimple: React.FC = () => {
           onClick={scrollToPricing}
           className="w-full py-3 bg-paulina-primary text-white font-bold text-lg rounded-full shadow-xl hover:bg-paulina-accent transition-all duration-300"
         >
-          Zobacz Pakiety (98% wybiera Premium)
+          Oferta tylko do 30.11 do 23:59
         </button>
       </div>
     </section>

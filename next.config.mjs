@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/egzamin-bf',
+  basePath: '/egzamin-bf-dogrywka',
   images: {
     remotePatterns: [
       {

@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   title: 'Program Ósmoklasisty 2026 - Paulina od Matematyki',
   description: 'Zdaj Egzamin Ósmoklasisty z Matmy na ponad 80% bez stresu i drogich korepetycji',
   icons: {
-    icon: '/egzamin-bf/favicon.ico',
-    apple: '/egzamin-bf/icon.png',
+    icon: '/egzamin/favicon.ico',
+    apple: '/egzamin/icon.png',
   },
 }
 
@@ -56,14 +56,14 @@ export default function RootLayout({
         {/* Preload critical fonts */}
         <link
           rel="preload"
-          href="/egzamin-bf/_next/static/media/d2eebaa28f8365b1-s.06c05dc1.woff2"
+          href="/egzamin/_next/static/media/d2eebaa28f8365b1-s.06c05dc1.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/egzamin-bf/_next/static/media/9068cf02accee9f5-s.093f0f19.woff2"
+          href="/egzamin/_next/static/media/9068cf02accee9f5-s.093f0f19.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

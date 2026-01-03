@@ -159,7 +159,7 @@ const Solutions: React.FC = () => {
           </p>
           <div className="max-w-2xl mx-auto bg-paulina-bg-yellow rounded-lg p-4">
             <p className="text-sm text-gray-700">
-              *98% uczniów, którzy przerobili {">"} 80% materiału osiągnęło {">"} 75% na egzaminie.
+              *Uczniowie, którzy systematycznie przerabiają materiał, osiągają wysokie wyniki na egzaminie.
               Gwarancja dotyczy satysfakcji z kursu (30 dni zwrotu),
               nie konkretnego wyniku egzaminu.
             </p>

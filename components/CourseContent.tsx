@@ -203,7 +203,7 @@ const CourseContent: React.FC = () => {
               </div>
             </div>
             <p className="text-center mt-4 text-gray-600">
-              Widok z wnętrza platformy do której dostajesz dostęp od razu po dołączeniu:
+              Widok z wnętrza platformy, do której dostajesz dostęp od razu po dołączeniu:
             </p>
             <p className="text-center mt-2 text-sm text-gray-500">
               👉 Kliknij strzałki lub kropki aby zobaczyć więcej zdjęć platformy

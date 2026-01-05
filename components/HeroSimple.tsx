@@ -46,14 +46,14 @@ const HeroSimple: React.FC = () => {
 
             {/* Subheadline - Rozszerzony */}
             <p className="text-base sm:text-lg text-gray-700 mb-8">
-              Sprawdzona przez <span className="font-bold text-paulina-primary">20 000 ósmoklasistów</span> metoda, która sprawia, że dziecko samo siada do nauki. <span className="font-bold text-paulina-accent">Wystarczy 20 minut dziennie</span>
+              Sprawdzona przez <span className="font-bold text-paulina-primary">24 000 ósmoklasistów</span> metoda, która sprawia, że dziecko samo siada do nauki. <span className="font-bold text-paulina-accent">Wystarczy 20 minut dziennie</span>
             </p>
 
             {/* Social Proof */}
             <div className="flex flex-wrap gap-6 mb-8">
               <div className="flex items-center gap-2">
                 <Users className="text-paulina-primary" size={20} />
-                <span className="text-sm font-semibold">20 000+ uczniów</span>
+                <span className="text-sm font-semibold">24 000+ uczniów</span>
               </div>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
@@ -155,7 +155,7 @@ const HeroSimple: React.FC = () => {
           onClick={scrollToPricing}
           className="w-full py-3 bg-paulina-primary text-white font-bold text-lg rounded-full shadow-xl hover:bg-paulina-accent transition-all duration-300"
         >
-          Oferta tylko do 30.11 do 23:59
+          Zobacz pakiety i ceny
         </button>
       </div>
     </section>

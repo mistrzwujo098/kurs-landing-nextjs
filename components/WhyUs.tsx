@@ -53,7 +53,7 @@ const WhyUs: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-paulina-primary mb-4">
-            Dlaczego <span className="text-paulina-accent">ponad 20 000 rodziców</span> wybrało właśnie mnie?
+            Dlaczego <span className="text-paulina-accent">ponad 24 000 rodziców</span> wybrało właśnie mnie?
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Porównaj sam i zobacz, dlaczego tradycyjne metody <span className="font-bold">nie działają</span>,
@@ -129,7 +129,7 @@ const WhyUs: React.FC = () => {
             <div className="bg-white/10 backdrop-blur rounded-xl p-4">
               <h4 className="font-bold mb-2">📊 Sprawdzone wyniki</h4>
               <p className="text-sm">
-                Ponad 95% kursantów zdało ze świetnym wynikiem w przeszłości.
+                98% kursantów zdało ze świetnym wynikiem w przeszłości.
               </p>
             </div>
           </div>

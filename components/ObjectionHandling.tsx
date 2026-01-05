@@ -41,7 +41,7 @@ const ObjectionHandling: React.FC = () => {
       question: 'To za drogo, nie stać mnie na taki wydatek',
       concern: 'Cena kursu',
       icon: Wallet,
-      answer: 'Rozumiem! Dlatego oferuję raty 0% - tylko 200 zł miesięcznie. To mniej niż 2 godziny korepetycji! Plus oszczędzasz średnio 3000 zł na korepetycjach.',
+      answer: 'Rozumiem! Dlatego oferuję 10 rat 0% - już od 100 zł miesięcznie. To mniej niż 1 godzina korepetycji! Plus oszczędzasz średnio 3000 zł na korepetycjach.',
       proof: 'Średni koszt przygotowania z korepetytorem to 3600 zł',
       guarantee: '30-dniowa gwarancja zwrotu, nawet po przerobieniu lekcji'
     },
@@ -59,7 +59,7 @@ const ObjectionHandling: React.FC = () => {
       question: 'Skąd mam wiedzieć, że to nie oszustwo?',
       concern: 'Wiarygodność',
       icon: Shield,
-      answer: 'Posiadam 15-letnie doświadczenie w nauczaniu matematyki. Co roku zdobywam 1 miejsce w Orłach Edukacji. Mam ponad 24 000 zadowolonych uczniow oraz setki opinii na Facebooku i Google.',
+      answer: 'Posiadam 16-letnie doświadczenie w nauczaniu matematyki. Co roku zdobywam 1 miejsce w Orłach Edukacji. Mam ponad 24 000 zadowolonych uczniów oraz setki opinii na Facebooku i Google.',
       proof: 'Średnia ocena 4.9/5 z ponad 1000 opinii',
       guarantee: 'Płatność przez bezpieczny system, faktura VAT, pełna gwarancja'
     },

@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   basePath: '/egzamin',
+  assetPrefix: '/egzamin',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'paulinaodmatematyki.com',
-        pathname: '/wp-content/uploads/**',
-      },
-    ],
+    unoptimized: true,
   },
 }
 

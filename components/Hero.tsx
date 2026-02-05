@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Clock, Award, Users, Star, CheckCircle, AlertCircle, TrendingUp } from 'lucide-react';
 
@@ -111,7 +112,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <motion.button
               onClick={scrollToPricing}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-paulina-accent to-paulina-orange text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transition-all duration-300 inline-flex items-center justify-center gap-2 group"
             >
@@ -183,9 +184,12 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative"
         >
-          <img 
+          <Image
             src="https://paulinaodmatematyki.com/wp-content/uploads/2025/06/hero-1.webp"
             alt="Paulina od Matematyki"
+            width={448}
+            height={560}
+            priority
             className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
           />
           

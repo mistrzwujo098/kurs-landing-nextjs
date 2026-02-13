@@ -41,7 +41,7 @@ const BlackFridayOffer: React.FC = () => {
   const bonuses = [
     {
       icon: Video,
-      title: 'Kurs Główny - Program Ósmoklasisty 2025',
+      title: 'Kurs Główny - Program Ósmoklasisty 2026',
       value: 1997,
       details: [
         '50h materiału video HD',

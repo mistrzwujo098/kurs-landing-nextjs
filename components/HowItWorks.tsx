@@ -172,7 +172,7 @@ const HowItWorks: React.FC = () => {
 
           <div className="mt-6 p-4 bg-paulina-bg-yellow rounded-lg">
             <p className="text-center text-gray-700">
-              <span className="font-bold text-paulina-primary">Rezultat:</span> 20 000 uczniów osiągnęło średnią <span className="font-bold text-paulina-accent">84%</span> stosując tę metodę
+              <span className="font-bold text-paulina-primary">Rezultat:</span> 24 000 uczniów osiągnęło średnią <span className="font-bold text-paulina-accent">84%</span> stosując tę metodę
             </p>
           </div>
         </motion.div>

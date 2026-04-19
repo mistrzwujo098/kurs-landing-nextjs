@@ -2,132 +2,105 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Star, Shield, Users, CheckCircle, ChevronRight } from 'lucide-react';
+import { Star, ChevronRight } from 'lucide-react';
 import { tracking } from '@/lib/tracking';
 
 const HeroSimple: React.FC = () => {
   const scrollToPricing = () => {
-    // Track button click
     tracking.viewContent('Hero CTA - Zobacz pakiety')
-
     const element = document.getElementById('pricing');
     element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const daysToExam = Math.ceil((new Date('2026-05-12').getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
+
   return (
-    <section id="hero" className="relative bg-gradient-to-b from-paulina-bg-purple via-white to-paulina-bg-yellow pt-20 pb-12 px-4 sm:px-6 md:px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <div className="animate-fade-in-up">
-            {/* Trust Badge - January Offer */}
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-paulina-primary to-paulina-accent text-white rounded-full px-4 py-2 shadow-md mb-6">
-              <Shield className="text-white" size={16} />
-              <span className="text-sm font-semibold">Sprawdzona metoda 24 000+ uczniów</span>
-            </div>
+    <section id="hero" className="relative bg-[#fbf9f7] pt-20 pb-16 px-4 sm:px-6 md:px-4 overflow-hidden">
+      {/* Subtelny akcent tła — pojedyncze ciepłe światło, zamiast 3-kolorowego gradientu */}
+      <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[80%] bg-paulina-bg-yellow/40 rounded-full blur-[120px] pointer-events-none" />
 
-            {/* Main Headline - Skrócony */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-paulina-primary leading-tight mb-6">
-              Metoda LAPS: <span className="text-paulina-accent">84% bez korepetycji</span>
-            </h1>
-
-            {/* Subheadline - Rozszerzony */}
-            <p className="text-base sm:text-lg text-gray-700 mb-8">
-              Sprawdzona przez <span className="font-bold text-paulina-primary">24 000 ósmoklasistów</span> metoda, która sprawia, że dziecko samo siada do nauki. <span className="font-bold text-paulina-accent">Wystarczy 20 minut dziennie</span>
+      <div className="relative max-w-7xl mx-auto">
+        {/* Asymetryczny layout 7/5 zamiast 50/50 */}
+        <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
+          {/* Lewa kolumna — 7/12 (większa, dominująca typografia) */}
+          <div className="md:col-span-7 animate-fade-in-up">
+            {/* Jeden malutki pretitle zamiast badge z gradientem */}
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-6">
+              Program Ósmoklasisty · Edycja 2026
             </p>
 
-            {/* Social Proof */}
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2">
-                <Users className="text-paulina-primary" size={20} />
-                <span className="text-sm font-semibold">24 000+ uczniów</span>
-              </div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="text-paulina-accent fill-current" size={16} />
-                ))}
-                <span className="text-sm font-semibold ml-1">4.9/5</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="text-paulina-primary" size={20} />
-                <span className="text-sm font-semibold">30 dni gwarancji</span>
-              </div>
-            </div>
+            {/* Wielki headline z display fontem */}
+            <h1 className="font-display text-[clamp(2.5rem,6.5vw,5.5rem)] text-paulina-primary leading-[0.95] mb-8 tracking-tight">
+              84% bez&nbsp;korepetycji.
+              <span className="block italic text-paulina-accent font-normal">
+                Metoda LAPS.
+              </span>
+            </h1>
 
-            {/* Key Benefits */}
-            <div className="space-y-3 mb-8">
-              {[
-                'Dziecko uczy się SAMO - koniec z wieczornymi kłótniami',
-                'Zaoszczędzisz 1400 zł (vs 4 miesiące korepetycji)',
-                '30-dniowa gwarancja zwrotu bez pytań'
-              ].map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 animate-slide-in-left"
-                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-                >
-                  <CheckCircle className="text-paulina-accent flex-shrink-0" size={20} />
-                  <span className="text-sm sm:text-base text-gray-700">{benefit}</span>
+            {/* Prosty subheadline, bez emoji, z typograficznym akcentem */}
+            <p className="text-lg sm:text-xl text-gray-700 mb-10 max-w-2xl leading-relaxed">
+              Sprawdzona przez <span className="font-semibold text-paulina-primary">24 000 ósmoklasistów</span> metoda,
+              która sprawia, że dziecko samo siada do nauki.
+              Wystarczy 20&nbsp;minut&nbsp;dziennie.
+            </p>
+
+            {/* CTA + minimalny proof inline */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
+              <button
+                onClick={scrollToPricing}
+                className="inline-flex items-center gap-2 px-8 py-4 bg-paulina-primary text-white font-bold rounded-full hover:bg-paulina-accent transition-colors duration-300 active:scale-[0.98] group"
+              >
+                <span className="text-base">Zobacz pakiety i ceny</span>
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+
+              <div className="flex items-center gap-3 text-sm text-gray-600">
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="text-paulina-accent fill-current" size={14} />
+                  ))}
                 </div>
-              ))}
+                <span>
+                  <strong className="text-paulina-primary">4,9 / 5</strong> · 24 000+ uczniów
+                </span>
+              </div>
             </div>
 
-            {/* CTA Button */}
-            <button
-              onClick={scrollToPricing}
-              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-paulina-accent text-white font-bold rounded-full shadow-2xl transform transition-all duration-300 hover:bg-paulina-primary hover:shadow-3xl hover:scale-[1.02] active:scale-[0.95] group"
-            >
-              <span className="text-base sm:text-lg">Zobacz pakiety i ceny</span>
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-
-            {/* Urgency */}
-            <div className="text-sm text-gray-600 mt-4">
-              <p>⚠️ Do egzaminu zostało tylko <span className="font-bold text-paulina-accent">{Math.ceil((new Date('2026-05-12').getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dni</span></p>
-              <p className="mt-1">Program wymaga minimum 3 miesięcy regularnej nauki. Zapisz się teraz — Twoje dziecko będzie gotowe na czas.</p>
-            </div>
+            {/* Minimalny urgency — bez emoji, bez ramek */}
+            <p className="text-sm text-gray-500 max-w-md">
+              Do egzaminu zostało <span className="font-semibold text-paulina-primary">{daysToExam} dni</span>. Program wymaga min. 3 miesięcy pracy — im wcześniej start, tym lżej.
+            </p>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="relative hidden md:block">
+          {/* Prawa kolumna — 5/12 (mniejsze zdjęcie, offset) */}
+          <div className="md:col-span-5 hidden md:block">
             <div className="relative">
               <Image
                 src="https://paulinaodmatematyki.com/wp-content/uploads/2025/06/hero-1.webp"
                 alt="Paulina od Matematyki"
-                width={800}
-                height={800}
-                sizes="(max-width: 768px) 0px, (max-width: 1280px) 45vw, 560px"
+                width={600}
+                height={600}
+                sizes="(max-width: 768px) 0px, (max-width: 1280px) 40vw, 480px"
                 priority
                 unoptimized
-                className="rounded-2xl shadow-xl w-full max-w-md mx-auto"
+                className="rounded-2xl w-full max-w-md mx-auto shadow-lg"
               />
-              
-              {/* Floating Stats - desktop only */}
-              <div
-                className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 animate-fade-in-up"
-                style={{ animationDelay: '0.8s' }}
-              >
-                <p className="text-3xl font-bold text-paulina-primary">84%</p>
-                <p className="text-xs text-gray-600">Średni wynik</p>
-              </div>
 
-              <div
-                className="absolute -top-6 -right-6 bg-white rounded-xl shadow-xl p-4 animate-fade-in-up"
-                style={{ animationDelay: '1s' }}
-              >
-                <p className="text-2xl font-bold text-paulina-accent">98%</p>
-                <p className="text-xs text-gray-600">Zadowolonych rodziców</p>
+              {/* Jedna liczba jako element graficzny — duża typografia zamiast "stat badge" */}
+              <div className="absolute -bottom-8 -left-6 bg-white rounded-2xl px-6 py-5 shadow-xl border border-gray-100">
+                <p className="display-numeral text-[5rem] text-paulina-primary">84%</p>
+                <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Średni wynik kursantów</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Sticky Mobile CTA - white background with colored button */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t-2 border-gray-200 p-4 shadow-2xl" data-testid="sticky-cta">
+      {/* Sticky mobile CTA — bez zmian, działa */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 p-4 shadow-lg" data-testid="sticky-cta">
         <button
           onClick={scrollToPricing}
-          className="w-full py-3 bg-paulina-primary text-white font-bold text-lg rounded-full shadow-xl hover:bg-paulina-accent transition-all duration-300"
+          className="w-full py-3 bg-paulina-primary text-white font-bold text-lg rounded-full hover:bg-paulina-accent transition-colors duration-300"
         >
           Zobacz pakiety i ceny
         </button>

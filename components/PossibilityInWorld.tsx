@@ -1,169 +1,115 @@
 'use client'
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { Check, X } from 'lucide-react';
 
 const PossibilityInWorld: React.FC = () => {
-  const shouldReduceMotion = useReducedMotion();
-
   const stats = [
-    {
-      icon: Users,
-      number: '24 000+',
-      label: 'Uczniów przeszło przez kurs',
-      detail: 'Od 2019 roku'
-    },
-    {
-      icon: Award,
-      number: '84%',
-      label: 'Średni wynik na egzaminie',
-      detail: 'Dane z 2024 roku'
-    },
-    {
-      icon: TrendingUp,
-      number: '+40 pkt',
-      label: 'Średni wzrost wyniku',
-      detail: 'Pierwszy vs ostatni test próbny'
-    },
-    {
-      icon: CheckCircle,
-      number: '98%',
-      label: 'Zadowolonych rodziców',
-      detail: 'Na podstawie ankiet z 2024'
-    }
+    { number: '24K+', label: 'Uczniów przeszło przez kurs', detail: 'od 2019 roku' },
+    { number: '84%', label: 'Średni wynik na egzaminie', detail: 'dane z 2024 roku' },
+    { number: '+40', label: 'Punktów średniego wzrostu', detail: 'pierwszy vs ostatni próbny' },
+    { number: '98%', label: 'Zadowolonych rodziców', detail: 'ankiety z 2024' },
   ];
 
-  // Conditional animation variants - ensure visibility when animations disabled
-  const headerAnimation = shouldReduceMotion
-    ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
-    : { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.6 } };
-
-  const statAnimation = shouldReduceMotion
-    ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
-    : { initial: { opacity: 0, scale: 0.9 }, whileInView: { opacity: 1, scale: 1 }, viewport: { once: true }, transition: { duration: 0.5 } };
-
   return (
-    <section id="possibility" className="py-16 bg-gradient-to-b from-paulina-bg-yellow to-white">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header - LCP element optimized for mobile */}
-        <motion.div
-          {...headerAnimation}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-paulina-primary mb-4">
-            To NIE jest teoria. To działa TERAZ.
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Metoda małych kroków + systematyczność = wyniki, które były niemożliwe 5 lat temu
+    <section id="possibility" className="py-20 md:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+            Liczby
           </p>
-        </motion.div>
-
-        {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {stats.map((stat, index) => {
-            const animation = shouldReduceMotion
-              ? { initial: { opacity: 1 }, animate: { opacity: 1 } }
-              : { initial: { opacity: 0, scale: 0.9 }, whileInView: { opacity: 1, scale: 1 }, viewport: { once: true }, transition: { duration: 0.5, delay: index * 0.1 } };
-
-            return (
-            <motion.div
-              key={index}
-              {...animation}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center"
-            >
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-paulina-primary to-paulina-purple flex items-center justify-center">
-                <stat.icon className="text-white" size={32} />
-              </div>
-              <div className="text-4xl font-bold text-paulina-accent mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-900 font-semibold mb-2">
-                {stat.label}
-              </div>
-              <div className="text-sm text-gray-500">
-                {stat.detail}
-              </div>
-            </motion.div>
-            );
-          })}
+          <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
+            To nie jest teoria.
+            <span className="block italic text-paulina-accent font-normal">To działa teraz.</span>
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Metoda małych kroków + systematyczność = wyniki, które były niemożliwe 5 lat temu.
+          </p>
         </div>
 
-        {/* Main Content */}
-        <motion.div
-          {...headerAnimation}
-          className="bg-white rounded-2xl p-8 md:p-12 shadow-xl"
-        >
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-paulina-primary mb-6">
-              Dlaczego nauka na ostatnią chwilę nie działa?
-            </h3>
-
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
-                  <span className="text-2xl">❌</span>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-gray-900 mb-2">
-                    Uczenie się "na ostatnią chwilę"
-                  </h4>
-                  <p className="text-gray-700">
-                    Widziałam setki uczniów, którzy zaczynali naukę miesiąc przed egzaminem ósmoklasisty. <span className="font-bold text-red-600">Stres ogromny, efekty słabe</span>. Wiedza "wpycha się" do głowy, ale nie zostaje na długo. Po egzaminie - puste.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                  <span className="text-2xl">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-paulina-primary mb-2">
-                    Systematyczna nauka małymi krokami
-                  </h4>
-                  <p className="text-gray-700">
-                    20 minut dziennie przez 6-8 miesięcy. <span className="font-bold text-green-600">Mózg ma czas na zrozumienie</span>. Wiedza buduje się powoli, ale zostaje na lata. Większość moich uczniów po roku pamięta więcej niż ci, którzy wkuwali na ostatnią chwilę.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-paulina-bg-purple rounded-xl p-6 mb-6">
-              <h4 className="font-bold text-lg text-paulina-primary mb-3">
-                Co daje kurs online vs tradycyjne korepetycje?
-              </h4>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />
-                  <span><span className="font-bold">Dostęp 24/7:</span> Dziecko uczy się WTEDY kiedy ma ochotę, nie czeka tydzień na korepetycje</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />
-                  <span><span className="font-bold">Natychmiastowa odpowiedź:</span> Rozwiązujesz zadanie → od razu wiesz czy dobrze (nie czekasz 3 dni na sprawdzenie)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />
-                  <span><span className="font-bold">Śledzenie postępów:</span> Widzisz co już umiesz → motywacja rośnie → chce Ci się więcej</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-paulina-accent flex-shrink-0 mt-0.5" size={20} />
-                  <span><span className="font-bold">Nauka jak gra:</span> Odhaczanie kolejnych tematów daje satysfakcję. To nie obowiązek, to wyzwanie które chcesz ukończyć.</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="text-center bg-gradient-to-r from-paulina-primary to-paulina-purple text-white rounded-xl p-6">
-              <p className="text-lg mb-2">
-                <span className="font-bold">Nie musisz wierzyć na słowo.</span>
+        {/* Stats — wielkie typograficzne liczby zamiast kart z ikonami */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 mb-20 border-t border-b border-gray-200 py-14">
+          {stats.map((stat, idx) => (
+            <div key={idx} className="text-center md:text-left">
+              <p className="display-numeral text-[4.5rem] md:text-[5.5rem] text-paulina-primary leading-none mb-3">
+                {stat.number}
               </p>
-              <p className="text-sm opacity-90">
-                24 000 uczniów już to sprawdziło. Średni wynik: 84%. To nie obietnica - to fakt.
+              <p className="text-sm font-semibold text-paulina-primary mb-1">
+                {stat.label}
+              </p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider">
+                {stat.detail}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Content box — bez gradientu, jedna karta z dwukolumnowym layoutem */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="font-display text-3xl md:text-4xl text-paulina-primary mb-10 tracking-tight text-center">
+            Dlaczego nauka na ostatnią chwilę&nbsp;nie&nbsp;działa?
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {/* Negatywny kontrast */}
+            <div className="bg-[#fbf9f7] rounded-2xl p-8 border border-gray-100">
+              <div className="flex items-center gap-3 mb-4">
+                <X className="text-gray-400" size={20} />
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">
+                  Na ostatnią chwilę
+                </p>
+              </div>
+              <h4 className="font-bold text-lg text-paulina-primary mb-3">
+                Uczenie się „jak do egzaminu”
+              </h4>
+              <p className="text-gray-700 leading-relaxed">
+                Widziałam setki uczniów, którzy zaczynali miesiąc przed egzaminem. Stres ogromny, efekty słabe. Wiedza „wpycha się” do głowy, ale nie zostaje. Po egzaminie — puste.
+              </p>
+            </div>
+
+            {/* Pozytywny kontrast */}
+            <div className="bg-paulina-primary text-white rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <Check className="text-paulina-accent" size={20} />
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent">
+                  Systematycznie
+                </p>
+              </div>
+              <h4 className="font-bold text-lg mb-3">
+                20 minut dziennie przez 6–8 miesięcy
+              </h4>
+              <p className="text-white/85 leading-relaxed">
+                Mózg ma czas na zrozumienie. Wiedza buduje się powoli, ale zostaje na lata. Większość uczniów po roku pamięta więcej niż ci, którzy wkuwali.
               </p>
             </div>
           </div>
-        </motion.div>
+
+          {/* Dlaczego online vs korepetycje — lista prosta, bez boxa z gradientem */}
+          <div className="border-t border-gray-200 pt-12">
+            <h4 className="font-display text-2xl text-paulina-primary tracking-tight mb-8 text-center">
+              Co daje kurs online ponad korepetycje
+            </h4>
+            <div className="grid md:grid-cols-2 gap-x-10 gap-y-5 max-w-3xl mx-auto">
+              {[
+                { title: 'Dostęp 24/7', description: 'Dziecko uczy się wtedy, kiedy ma ochotę — nie czeka tygodnia na następne spotkanie.' },
+                { title: 'Natychmiastowa odpowiedź', description: 'Rozwiązujesz zadanie i od razu wiesz, czy dobrze. Bez czekania 3 dni na sprawdzenie.' },
+                { title: 'Śledzenie postępów', description: 'Widzisz, co już umiesz. Motywacja rośnie, bo widzisz liczby przed sobą.' },
+                { title: 'Nauka jak gra', description: 'Odhaczanie tematów daje satysfakcję. Wyzwanie, które chcesz ukończyć.' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4">
+                  <span className="display-numeral text-3xl text-paulina-accent flex-shrink-0 leading-none">
+                    0{i + 1}
+                  </span>
+                  <div>
+                    <h5 className="font-bold text-paulina-primary mb-1">{item.title}</h5>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

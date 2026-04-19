@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import HeroSimple from '@/components/HeroSimple'
-import ParentTestimonials from '@/components/ParentTestimonials'
+import PossibilityInWorld from '@/components/PossibilityInWorld'
 import Problems from '@/components/Problems'
 import MechanismExplanation from '@/components/MechanismExplanation'
 import Solutions from '@/components/Solutions'
@@ -14,7 +14,6 @@ import CTAButton from '@/components/CTAButton'
 import ScrollProgress from '@/components/ScrollProgress'
 import WhatYouDiscover from '@/components/WhatYouDiscover'
 import WhyUs from '@/components/WhyUs'
-import PossibilityInWorld from '@/components/PossibilityInWorld'
 import JanuaryOffer from '@/components/JanuaryOffer'
 import WhosItFor from '@/components/WhosItFor'
 import QualifierGate from '@/components/QualifierGate'
@@ -24,7 +23,6 @@ const SectionPlaceholder = () => <div className="min-h-[400px]" />;
 const RealTestimonials = dynamic(() => import('@/components/RealTestimonials'), { loading: SectionPlaceholder })
 const RiskReversal = dynamic(() => import('@/components/RiskReversal'), { loading: SectionPlaceholder })
 const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'), { loading: SectionPlaceholder })
-const ObjectionHandling = dynamic(() => import('@/components/ObjectionHandling'), { loading: SectionPlaceholder })
 const Footer = dynamic(() => import('@/components/Footer'), { loading: SectionPlaceholder })
 const ExitPopup = dynamic(() => import('@/components/ExitPopup'))
 
@@ -33,12 +31,10 @@ export default function Home() {
 
   // Track user engagement
   useEffect(() => {
-    // Track time on page
     const startTime = Date.now()
 
     const handleUnload = () => {
       const timeSpent = Date.now() - startTime
-      // Send to analytics
       if (process.env.NODE_ENV === 'development') {
         console.log(`User spent ${Math.floor(timeSpent / 1000)}s on page`)
       }
@@ -51,67 +47,59 @@ export default function Home() {
     }
   }, [])
 
-  // Show qualifier gate first
   if (!showFullPage) {
     return <QualifierGate onShowFullPage={() => setShowFullPage(true)} courseType="egzamin" />
   }
 
   return (
     <div className="App">
-      {/* Scroll Progress & Navigation */}
       <ScrollProgress />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <HeroSimple />
 
-      {/* Possibility in World - Belief Shift Step 1 */}
+      {/* Liczby + „Dlaczego teraz" */}
       <PossibilityInWorld />
 
-      {/* Social Proof */}
-      <ParentTestimonials />
-
-      {/* Problem & Solution */}
+      {/* Diagnoza problemu */}
       <Problems />
+
+      {/* Transformacja — co osiągnie dziecko */}
       <Solutions />
 
-      {/* How It Works - LAPS Method - DISABLED (duplicates MechanismExplanation) */}
-      {/* <HowItWorks /> */}
-
-      {/* What You Discover */}
+      {/* Co konkretnie odkryje */}
       <WhatYouDiscover />
 
-      {/* Mechanism Explanation */}
+      {/* Jak działa metoda LAPS */}
       <MechanismExplanation />
 
-      {/* Why Choose Us */}
+      {/* Porównanie z korepetycjami */}
       <WhyUs />
 
-      {/* Course Content */}
+      {/* Zawartość kursu */}
       <CourseContent />
 
-      {/* Real Testimonials - 11 authentic reviews */}
+      {/* Opinie — masonry */}
       <RealTestimonials />
 
-      {/* Risk Reversal - 30 Day Guarantee */}
+      {/* Gwarancja (risk reversal) */}
       <RiskReversal />
 
-      {/* Who Is It For - Self-Belief */}
+      {/* Dla kogo / dla kogo nie */}
       <WhosItFor />
 
-      {/* January Offer - Value Stacking */}
+      {/* Wartość oferty / bonusy */}
       <JanuaryOffer />
 
       {/* Pricing */}
       <PricingSimple />
 
-      {/* Comparison Table */}
+      {/* Pełne porównanie pakietów */}
       <ComparisonTable />
 
-      {/* Objections & FAQ */}
-      <ObjectionHandling />
+      {/* FAQ (scalone z Objection Handling) */}
       <FAQ />
 
-      {/* Footer & Persistent CTA */}
       <Footer />
       <CTAButton />
       <ExitPopup />

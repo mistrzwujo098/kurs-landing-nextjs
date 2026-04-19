@@ -1,7 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { throttle } from '@/utils/throttle';
 
 const ScrollProgress: React.FC = () => {
@@ -9,14 +8,14 @@ const ScrollProgress: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
 
   const sections = [
-    { id: 'hero', name: 'Start', icon: '🏠' },
-    { id: 'testimonials', name: 'Opinie', icon: '⭐' },
-    { id: 'problems', name: 'Problem', icon: '❓' },
-    { id: 'solutions', name: 'Rozwiązanie', icon: '✅' },
-    { id: 'mechanism', name: 'Jak działa', icon: '⚙️' },
-    { id: 'course-content', name: 'Program', icon: '📚' },
-    { id: 'pricing', name: 'Cennik', icon: '💳' },
-    { id: 'faq', name: 'FAQ', icon: '💬' },
+    { id: 'hero', name: 'Start' },
+    { id: 'problems', name: 'Problem' },
+    { id: 'solutions', name: 'Rozwiązanie' },
+    { id: 'mechanism', name: 'Jak działa' },
+    { id: 'course-content', name: 'Program' },
+    { id: 'testimonials', name: 'Opinie' },
+    { id: 'pricing', name: 'Cennik' },
+    { id: 'faq', name: 'FAQ' },
   ];
 
   useEffect(() => {
@@ -25,7 +24,6 @@ const ScrollProgress: React.FC = () => {
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
 
-      // Determine active section
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -40,11 +38,10 @@ const ScrollProgress: React.FC = () => {
       }
     };
 
-    // Throttle scroll event to max 1x per 100ms for performance
     const throttledScroll = throttle(handleScroll, 100);
 
     window.addEventListener('scroll', throttledScroll);
-    handleScroll(); // Initial call
+    handleScroll();
 
     return () => window.removeEventListener('scroll', throttledScroll);
   }, []);
@@ -52,9 +49,9 @@ const ScrollProgress: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Account for fixed header
+      const offset = 80;
       const elementPosition = element.offsetTop - offset;
-      
+
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
@@ -64,45 +61,48 @@ const ScrollProgress: React.FC = () => {
 
   return (
     <>
-      {/* Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-[60]">
-        <motion.div
-          className="h-full bg-gradient-to-r from-paulina-accent to-paulina-primary"
+      {/* Progress Bar — pojedyncza paulina-accent, bez gradientu */}
+      <div className="fixed top-0 left-0 right-0 h-0.5 bg-transparent z-[60] pointer-events-none">
+        <div
+          className="h-full bg-paulina-accent transition-[width] duration-100"
           style={{ width: `${scrollProgress}%` }}
-          initial={{ width: 0 }}
-          animate={{ width: `${scrollProgress}%` }}
-          transition={{ duration: 0.1 }}
         />
       </div>
 
-      {/* Desktop Navigation Dots */}
-      <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
-        <div className="bg-white rounded-full shadow-lg p-2">
-          {sections.map((section, index) => (
-            <motion.button
-              key={section.id}
-              onClick={() => scrollToSection(section.id)}
-              className={`block w-10 h-10 rounded-full mb-2 last:mb-0 transition-all duration-300 relative group ${
-                activeSection === section.id
-                  ? 'bg-paulina-accent text-white'
-                  : 'bg-gray-100 hover:bg-paulina-bg-purple'
-              }`}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="text-sm">{section.icon}</span>
-              
-              {/* Tooltip */}
-              <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                <div className="bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+      {/* Desktop Navigation — cienkie kropki w pionowej linii (bez ikonek emoji) */}
+      <nav
+        aria-label="Nawigacja sekcji"
+        className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
+      >
+        <ul className="space-y-4">
+          {sections.map((section) => (
+            <li key={section.id}>
+              <button
+                onClick={() => scrollToSection(section.id)}
+                className="flex items-center gap-3 group"
+                aria-label={`Przejdź do sekcji ${section.name}`}
+              >
+                <span
+                  className={`inline-block h-[1px] transition-all ${
+                    activeSection === section.id
+                      ? 'w-10 bg-paulina-accent'
+                      : 'w-5 bg-paulina-primary/30 group-hover:w-8 group-hover:bg-paulina-accent/70'
+                  }`}
+                />
+                <span
+                  className={`text-xs uppercase tracking-wider transition-colors ${
+                    activeSection === section.id
+                      ? 'text-paulina-accent font-semibold opacity-100'
+                      : 'text-paulina-primary/50 opacity-0 group-hover:opacity-100'
+                  }`}
+                >
                   {section.name}
-                </div>
-              </div>
-            </motion.button>
+                </span>
+              </button>
+            </li>
           ))}
-        </div>
-      </div>
-
+        </ul>
+      </nav>
     </>
   );
 };

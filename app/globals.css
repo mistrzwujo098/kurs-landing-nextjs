@@ -20,11 +20,35 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #fef3ef 0%, #fff5f0 100%);
+  background: #fbf9f7;
   color: rgb(51, 51, 51);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, 'Times New Roman', serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+
+/* Cienka linia separator między sekcjami — editorial feel */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(87, 26, 71, 0.12), transparent);
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* Duża typograficzna liczba (stat displays, HowItWorks) */
+.display-numeral {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
 }
 
 code {

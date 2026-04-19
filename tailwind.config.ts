@@ -22,7 +22,7 @@ const config: Config = {
       fontFamily: {
         'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'sans-serif'],
         'varela': ['"Varela Round"', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif'],
+        'display': ['var(--font-display)', 'Georgia', 'Times New Roman', 'serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out both',

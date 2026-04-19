@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Varela_Round, Montserrat } from 'next/font/google'
+import { Inter, Varela_Round, Fraunces } from 'next/font/google'
 import './globals.css'
 import TrackingScripts from '@/components/tracking/TrackingScripts'
 // Tracking: FB Pixel, Google Ads, TikTok managed by Cloudflare Zaraz (auto-injected on edge)
@@ -18,11 +18,11 @@ const varelaRound = Varela_Round({
   variable: '--font-varela',
 })
 
-const montserrat = Montserrat({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-montserrat',
+  variable: '--font-display',
+  axes: ['SOFT', 'WONK', 'opsz'],
 })
 
 export const metadata: Metadata = {
@@ -92,7 +92,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pl" className={`${varelaRound.variable} ${inter.variable} ${montserrat.variable}`}>
+    <html lang="pl" className={`${varelaRound.variable} ${inter.variable} ${fraunces.variable}`}>
       <head>
         <link rel="preconnect" href="https://paulinaodmatematyki.com" />
         <link rel="preconnect" href="https://assets.mailerlite.com" />

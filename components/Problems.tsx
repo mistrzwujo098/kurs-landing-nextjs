@@ -1,116 +1,83 @@
 'use client'
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { X } from 'lucide-react';
 
 const Problems: React.FC = () => {
-  const beforeExam = [
-    'Odkładanie nauki „na później”',
-    'Nieefektywne metody uczenia się',
-    'Problemy z organizacją materiału',
-    'Narastający stres i presja',
-    'Konflikty rodzic-dziecko o naukę',
-    'Brak systematyczności',
-    'Marnowanie czasu na złe metody',
-    'Rosnąca frustracja',
-    'Chaos w notatkach',
-    'Brak planu działania'
-  ];
-
-  const duringExam = [
-    'Paraliżujący stres',
-    '„Pusty umysł” przy zadaniach',
-    'Złe zarządzanie czasem',
-    'Panika przy trudnych zadaniach',
-    'Problemy z koncentracją',
-    'Niezrozumienie poleceń',
-    'Gubienie punktów na głupich błędach',
-    'Zapominanie wzorów',
-    'Problemy z liczeniem',
-    'Brak pewności przy odpowiedziach'
-  ];
-
-  const afterExam = [
-    'Rozczarowanie wynikiem',
-    'Żal do siebie i innych',
-    'Stracone szanse',
-    'Gorszy start w liceum',
-    'Nadszarpnięte relacje w rodzinie'
+  const columns = [
+    {
+      label: 'Przed egzaminem',
+      items: [
+        'Odkładanie nauki „na później”',
+        'Nieefektywne metody uczenia się',
+        'Problemy z organizacją materiału',
+        'Narastający stres i presja',
+        'Konflikty rodzic–dziecko o naukę',
+        'Brak systematyczności',
+        'Marnowanie czasu na złe metody',
+        'Rosnąca frustracja',
+        'Chaos w notatkach',
+        'Brak planu działania'
+      ]
+    },
+    {
+      label: 'W trakcie egzaminu',
+      items: [
+        'Paraliżujący stres',
+        '„Pusty umysł” przy zadaniach',
+        'Złe zarządzanie czasem',
+        'Panika przy trudnych zadaniach',
+        'Problemy z koncentracją',
+        'Niezrozumienie poleceń',
+        'Gubienie punktów na głupich błędach',
+        'Zapominanie wzorów',
+        'Problemy z liczeniem',
+        'Brak pewności przy odpowiedziach'
+      ]
+    },
+    {
+      label: 'Po egzaminie',
+      items: [
+        'Rozczarowanie wynikiem',
+        'Żal do siebie i innych',
+        'Stracone szanse',
+        'Gorszy start w liceum',
+        'Nadszarpnięte relacje w rodzinie'
+      ]
+    }
   ];
 
   return (
-    <section id="problems" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            <span className="text-red-600">UWAGA:</span> Czy Twoje dziecko też...
-          </h2>
-          <p className="text-lg text-gray-700">
-            <span className="font-bold">Większość rodziców nie umie pomóc</span> dziecku z matematyką.
-            <span className="block text-base mt-2">Każdy dzień zwlekania to większy stres przed egzaminem.</span>
+    <section id="problems" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-14 max-w-2xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+            Diagnoza
           </p>
-        </motion.div>
+          <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
+            Czy Twoje dziecko też <span className="italic text-paulina-accent font-normal">to&nbsp;ma</span>?
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Większość rodziców nie umie pomóc dziecku z matematyką. Każdy dzień zwlekania to większy stres przed egzaminem.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-xl p-6 shadow-lg"
-          >
-            <h3 className="font-bold text-xl mb-4 text-gray-900">Przed egzaminem:</h3>
-            <ul className="space-y-2">
-              {beforeExam.map((item, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">❌</span>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-xl p-6 shadow-lg"
-          >
-            <h3 className="font-bold text-xl mb-4 text-gray-900">W trakcie egzaminu:</h3>
-            <ul className="space-y-2">
-              {duringExam.map((item, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">❌</span>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white rounded-xl p-6 shadow-lg"
-          >
-            <h3 className="font-bold text-xl mb-4 text-gray-900">Po egzaminie:</h3>
-            <ul className="space-y-2">
-              {afterExam.map((item, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">❌</span>
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {columns.map((col, idx) => (
+            <div key={idx} className="bg-[#fbf9f7] rounded-2xl p-7 border border-gray-100">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-5">
+                {col.label}
+              </p>
+              <ul className="space-y-2.5">
+                {col.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-gray-700">
+                    <X className="text-gray-400 flex-shrink-0 mt-1" size={14} />
+                    <span className="text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

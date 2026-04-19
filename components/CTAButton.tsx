@@ -36,10 +36,10 @@ const CTAButton: React.FC = () => {
           transition={{ duration: 0.3 }}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.95 }}
-          className="fixed bottom-8 right-8 bg-paulina-accent hover:bg-paulina-primary text-white font-bold py-4 px-8 rounded-full shadow-2xl z-50 hidden md:flex items-center gap-2"
+          className="fixed bottom-8 right-8 bg-paulina-primary hover:bg-paulina-accent text-white font-bold py-3.5 px-7 rounded-full shadow-lg z-50 hidden md:flex items-center gap-2 transition-colors"
         >
           Dołączam do programu
-          <span className="text-xl">👉</span>
+          <span className="text-xl" aria-hidden="true">→</span>
         </motion.button>
       )}
     </AnimatePresence>

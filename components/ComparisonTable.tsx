@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { CheckCircle, X } from 'lucide-react';
 
 const ComparisonTable: React.FC = () => {
@@ -33,73 +32,64 @@ const ComparisonTable: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-paulina-bg-purple">
+    <section className="py-20 bg-[#fbf9f7]">
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Szczegółowe porównanie pakietów
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600">
-            Wybierz pakiet idealny dla Twojego dziecka
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+            Pełne porównanie
           </p>
-        </motion.div>
+          <h2 className="font-display text-3xl md:text-5xl text-paulina-primary mb-4 tracking-tight">
+            Co zawiera który&nbsp;pakiet
+          </h2>
+          <p className="text-lg text-gray-600">
+            Wszystkie trzy pakiety dają tę samą wiedzę. Różnice dotyczą dostępu i dodatkowych materiałów.
+          </p>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-2xl shadow-xl overflow-hidden"
-        >
+        <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden max-w-5xl mx-auto">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-gradient-to-r from-paulina-primary to-paulina-purple text-white">
-                  <th className="text-left p-2 sm:p-4 text-xs sm:text-sm font-bold">📦 Zawartość pakietu</th>
-                  <th className="text-center p-2 sm:p-4 min-w-[80px] sm:min-w-[120px]">
+                <tr className="bg-paulina-primary text-white">
+                  <th className="text-left p-3 sm:p-5 text-xs sm:text-sm font-semibold">Zawartość pakietu</th>
+                  <th className="text-center p-3 sm:p-5 min-w-[80px] sm:min-w-[120px]">
                     <div className="font-bold text-xs sm:text-base">Standard</div>
-                    <div className="text-xs sm:text-sm font-normal">999 zł</div>
+                    <div className="text-xs sm:text-sm font-normal opacity-80">999 zł</div>
                   </th>
-                  <th className="text-center p-2 sm:p-4 min-w-[80px] sm:min-w-[120px] bg-white/10">
+                  <th className="text-center p-3 sm:p-5 min-w-[80px] sm:min-w-[120px] bg-white/10">
                     <div className="font-bold text-xs sm:text-base">Premium</div>
-                    <div className="text-xs sm:text-sm font-normal">1499 zł</div>
-                    <div className="text-[10px] sm:text-xs font-bold text-yellow-300 mt-1">POPULARNY</div>
+                    <div className="text-xs sm:text-sm font-normal opacity-80">1499 zł</div>
+                    <div className="text-[10px] sm:text-xs font-bold text-paulina-accent mt-1 tracking-wider">POLECANY</div>
                   </th>
-                  <th className="text-center p-2 sm:p-4 min-w-[80px] sm:min-w-[120px]">
+                  <th className="text-center p-3 sm:p-5 min-w-[80px] sm:min-w-[120px]">
                     <div className="font-bold text-xs sm:text-base">Expert</div>
-                    <div className="text-xs sm:text-sm font-normal">2499 zł</div>
+                    <div className="text-xs sm:text-sm font-normal opacity-80">2499 zł</div>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {features.map((feature, index) => (
-                  <tr key={index} className={`border-b ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+                  <tr key={index} className={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
                     <td className="p-2 sm:p-4 text-xs sm:text-sm text-gray-700">
                       {feature.name}
                     </td>
                     <td className="text-center p-2 sm:p-4">
                       {feature.standard ? (
-                        <CheckCircle className="inline text-green-500" size={16} />
+                        <CheckCircle className="inline text-paulina-accent" size={16} />
                       ) : (
                         <X className="inline text-gray-300" size={16} />
                       )}
                     </td>
-                    <td className="text-center p-2 sm:p-4 bg-paulina-bg-purple/30">
+                    <td className="text-center p-2 sm:p-4 bg-paulina-accent/5">
                       {feature.premium ? (
-                        <CheckCircle className="inline text-green-500" size={16} />
+                        <CheckCircle className="inline text-paulina-accent" size={16} />
                       ) : (
                         <X className="inline text-gray-300" size={16} />
                       )}
                     </td>
                     <td className="text-center p-2 sm:p-4">
                       {feature.expert ? (
-                        <CheckCircle className="inline text-green-500" size={16} />
+                        <CheckCircle className="inline text-paulina-accent" size={16} />
                       ) : (
                         <X className="inline text-gray-300" size={16} />
                       )}
@@ -109,25 +99,19 @@ const ComparisonTable: React.FC = () => {
               </tbody>
             </table>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 text-center"
-        >
+        <div className="mt-10 text-center">
           <button
             onClick={() => {
               const element = document.getElementById('pricing');
               element?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="bg-gradient-to-r from-paulina-accent to-paulina-orange text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-paulina-primary text-white font-bold py-3.5 px-8 rounded-full hover:bg-paulina-accent transition-colors duration-300"
           >
-            Wybierz swój pakiet teraz →
+            Wybierz swój pakiet
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

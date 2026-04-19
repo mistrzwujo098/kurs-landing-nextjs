@@ -91,6 +91,29 @@ const HeroSimple: React.FC = () => {
                 <p className="display-numeral text-[5rem] text-paulina-primary">84%</p>
                 <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Średni wynik kursantów</p>
               </div>
+
+              {/* Handwritten note — strzałka do zdjęcia, autorski touch */}
+              <div className="absolute -top-4 -right-2 rotate-6 hidden lg:block">
+                <p className="font-hand text-2xl text-paulina-accent leading-tight text-right max-w-[140px]">
+                  cześć,
+                  <span className="block">to ja!</span>
+                </p>
+                <svg
+                  className="w-10 h-10 text-paulina-accent mt-1 ml-auto -rotate-45"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 20 Q 15 5, 35 20 M 28 15 L 35 20 L 30 27"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

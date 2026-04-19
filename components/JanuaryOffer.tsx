@@ -65,8 +65,13 @@ const JanuaryOffer: React.FC = () => {
   const savingsPercent = Math.round((savings / totalValue) * 100);
 
   return (
-    <section id="january-offer" className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="january-offer" className="py-24 bg-paulina-bg-yellow/50 relative overflow-hidden">
+      {/* Ornament — wielki symbol gwiazdy/ozdobnika po stronie */}
+      <div
+        className="absolute -top-16 -right-16 w-96 h-96 rounded-full bg-paulina-accent/10 blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+      <div className="relative max-w-5xl mx-auto px-4">
         {/* Header — bez 3-kolorowego gradientu, bez sparkli */}
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">

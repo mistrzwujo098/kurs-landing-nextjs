@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Varela_Round, Fraunces } from 'next/font/google'
+import { Inter, Varela_Round, Fraunces, Caveat } from 'next/font/google'
 import './globals.css'
 import TrackingScripts from '@/components/tracking/TrackingScripts'
 // Tracking: FB Pixel, Google Ads, TikTok managed by Cloudflare Zaraz (auto-injected on edge)
@@ -23,6 +23,12 @@ const fraunces = Fraunces({
   display: 'swap',
   variable: '--font-display',
   axes: ['SOFT', 'WONK', 'opsz'],
+})
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-hand',
 })
 
 export const metadata: Metadata = {
@@ -92,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pl" className={`${varelaRound.variable} ${inter.variable} ${fraunces.variable}`}>
+    <html lang="pl" className={`${varelaRound.variable} ${inter.variable} ${fraunces.variable} ${caveat.variable}`}>
       <head>
         <link rel="preconnect" href="https://paulinaodmatematyki.com" />
         <link rel="preconnect" href="https://assets.mailerlite.com" />

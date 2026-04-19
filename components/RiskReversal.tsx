@@ -88,7 +88,7 @@ const RiskReversal: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom statement — pojedyncza, mocna linia */}
+        {/* Bottom statement — pojedyncza, mocna linia + podpis Pauliny */}
         <div className="text-center">
           <p className="font-display text-2xl md:text-3xl text-paulina-primary tracking-tight italic">
             Ty nie ryzykujesz nic.
@@ -96,6 +96,16 @@ const RiskReversal: React.FC = () => {
               Całe ryzyko biorę na siebie.
             </span>
           </p>
+
+          {/* Handwritten signature — Paulina osobiście */}
+          <div className="mt-10 inline-flex flex-col items-center">
+            <span className="font-hand text-5xl md:text-6xl text-paulina-accent leading-none -rotate-3">
+              Paulina
+            </span>
+            <span className="text-xs uppercase tracking-[0.25em] text-gray-400 mt-2">
+              Autorka kursu
+            </span>
+          </div>
         </div>
       </div>
     </section>

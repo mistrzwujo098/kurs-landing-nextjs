@@ -20,6 +20,8 @@ import QualifierGate from '@/components/QualifierGate'
 
 // Lazy load components below fold for better LCP
 const SectionPlaceholder = () => <div className="min-h-[400px]" />;
+const PullQuote = dynamic(() => import('@/components/PullQuote'), { loading: SectionPlaceholder })
+const PlatformShowcase = dynamic(() => import('@/components/PlatformShowcase'), { loading: SectionPlaceholder })
 const RealTestimonials = dynamic(() => import('@/components/RealTestimonials'), { loading: SectionPlaceholder })
 const RiskReversal = dynamic(() => import('@/components/RiskReversal'), { loading: SectionPlaceholder })
 const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'), { loading: SectionPlaceholder })
@@ -61,6 +63,9 @@ export default function Home() {
       {/* Liczby + „Dlaczego teraz" */}
       <PossibilityInWorld />
 
+      {/* Pull quote — przerwa rytmu, głos rodzica */}
+      <PullQuote />
+
       {/* Diagnoza problemu */}
       <Problems />
 
@@ -87,6 +92,9 @@ export default function Home() {
 
       {/* Dla kogo / dla kogo nie */}
       <WhosItFor />
+
+      {/* Image-heavy preview platformy — oddech wizualny przed ofertą */}
+      <PlatformShowcase />
 
       {/* Wartość oferty / bonusy */}
       <JanuaryOffer />

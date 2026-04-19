@@ -23,6 +23,7 @@ const config: Config = {
         'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'sans-serif'],
         'varela': ['"Varela Round"', 'sans-serif'],
         'display': ['var(--font-display)', 'Georgia', 'Times New Roman', 'serif'],
+        'hand': ['var(--font-hand)', '"Comic Sans MS"', 'cursive'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out both',

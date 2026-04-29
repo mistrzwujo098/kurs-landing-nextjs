@@ -50,14 +50,14 @@ const PlatformShowcase: React.FC = () => {
             </div>
           </div>
 
-          {/* Prawy górny */}
-          <div className="md:col-span-5 rounded-3xl overflow-hidden border border-gray-200 bg-white aspect-[4/3] md:aspect-auto">
+          {/* Prawy górny — lista tematów (obraz natywnie panoramiczny) */}
+          <div className="md:col-span-5 rounded-3xl overflow-hidden border border-gray-200 bg-white flex items-center justify-center p-4 aspect-[5/2] md:aspect-auto md:min-h-[140px]">
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2024/12/11fe3aae32f1e20994207d29fef4679257073333.webp"
               alt="Widok listy tematów"
               width={600}
-              height={400}
-              className="w-full h-full object-cover"
+              height={70}
+              className="max-w-full h-auto object-contain"
               unoptimized
             />
           </div>
@@ -78,23 +78,25 @@ const PlatformShowcase: React.FC = () => {
 
         {/* Drugi rząd — jeden pełny obraz + dwa małe */}
         <div className="grid md:grid-cols-12 gap-4 md:gap-6 mt-6">
-          <div className="md:col-span-4 rounded-3xl overflow-hidden border border-gray-200 aspect-[3/4]">
+          {/* Paulina — natywnie landscape, kontener landscape żeby nie ucinać twarzy */}
+          <div className="md:col-span-4 rounded-3xl overflow-hidden border border-gray-200 bg-white aspect-[4/3]">
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2024/12/Paulina-od-Matematyki-2-1.webp"
               alt="Paulina prowadząca lekcję"
-              width={500}
-              height={700}
-              className="w-full h-full object-cover"
+              width={1263}
+              height={827}
+              className="w-full h-full object-cover object-top"
               unoptimized
             />
           </div>
-          <div className="md:col-span-5 rounded-3xl overflow-hidden border border-gray-200 aspect-[3/4] md:aspect-auto">
+          {/* Platforma na różnych urządzeniach — natywnie szeroka, contain żeby nic nie uciąć */}
+          <div className="md:col-span-5 rounded-3xl overflow-hidden border border-gray-200 bg-[#fbf9f7] flex items-center justify-center p-4 aspect-[16/9] md:aspect-auto">
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2024/12/Paulina-od-Matematyki-1-1.webp"
               alt="Platforma kursu na różnych urządzeniach"
-              width={700}
-              height={500}
-              className="w-full h-full object-cover"
+              width={1241}
+              height={635}
+              className="max-w-full h-auto object-contain"
               unoptimized
             />
           </div>

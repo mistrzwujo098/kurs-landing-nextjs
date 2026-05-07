@@ -12,7 +12,7 @@ const HeroSimple: React.FC = () => {
     element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const daysToExam = Math.ceil((new Date('2026-05-12').getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
+  const daysToExam = Math.max(0, Math.ceil((new Date('2026-05-12').getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)));
 
   return (
     <section id="hero" className="relative bg-[#fbf9f7] pt-20 pb-16 px-4 sm:px-6 md:px-4 overflow-hidden">
@@ -24,6 +24,17 @@ const HeroSimple: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
           {/* Lewa kolumna — 7/12 (większa, dominująca typografia) */}
           <div className="md:col-span-7 animate-fade-in-up">
+            {/* Mobile-only avatar nad H1 */}
+            <Image
+              src="https://paulinaodmatematyki.com/wp-content/uploads/2025/06/hero-1.webp"
+              alt="Paulina, autorka kursu"
+              width={200}
+              height={200}
+              priority
+              unoptimized
+              className="md:hidden max-w-[100px] rounded-full mx-auto mb-6 shadow-md"
+            />
+
             {/* Jeden malutki pretitle zamiast badge z gradientem */}
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-6">
               Program Ósmoklasisty · Edycja 2026
@@ -67,9 +78,15 @@ const HeroSimple: React.FC = () => {
             </div>
 
             {/* Minimalny urgency — bez emoji, bez ramek */}
-            <p className="text-sm text-gray-500 max-w-md">
-              Do egzaminu zostało <span className="font-semibold text-paulina-primary">{daysToExam} dni</span>. Program wymaga min. 3 miesięcy pracy — im wcześniej start, tym lżej.
-            </p>
+            {daysToExam === 0 ? (
+              <p className="text-sm text-gray-500 max-w-md">
+                Tegoroczny egzamin za nami. Zapisz się już dziś na edycję 2027 i&nbsp;zacznij przygotowania bez stresu — im wcześniej start, tym lżej.
+              </p>
+            ) : (
+              <p className="text-sm text-gray-500 max-w-md">
+                Do egzaminu zostało <span className="font-semibold text-paulina-primary">{daysToExam} dni</span>. Program wymaga min. 3 miesięcy pracy — im wcześniej start, tym lżej.
+              </p>
+            )}
           </div>
 
           {/* Prawa kolumna — 5/12 (mniejsze zdjęcie, offset) */}
@@ -120,7 +137,7 @@ const HeroSimple: React.FC = () => {
       </div>
 
       {/* Sticky mobile CTA — bez zmian, działa */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 p-4 shadow-lg" data-testid="sticky-cta">
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] px-4 shadow-lg" data-testid="sticky-cta">
         <button
           onClick={scrollToPricing}
           className="w-full py-3 bg-paulina-primary text-white font-bold text-lg rounded-full hover:bg-paulina-accent transition-colors duration-300"

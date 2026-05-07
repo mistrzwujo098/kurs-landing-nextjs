@@ -1,10 +1,37 @@
 'use client'
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Shield, Lock, Star, CheckCircle, ChevronRight } from 'lucide-react';
 import { tracking } from '@/lib/tracking';
 
+const Spinner: React.FC = () => (
+  <svg
+    className="w-5 h-5 animate-spin"
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeDasharray="40 60"
+      opacity="0.4"
+    />
+    <path
+      d="M22 12a10 10 0 0 1-10 10"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 const PricingSimple: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<number | null>(null);
   const packages = [
     {
       name: 'Standard',
@@ -70,10 +97,10 @@ const PricingSimple: React.FC = () => {
   ];
 
   const handleCheckout = (index: number, pkgName: string, price: number) => {
+    if (isLoading !== null) return;
+    setIsLoading(index);
     tracking.initiateCheckout(price, `Pakiet ${pkgName}`);
-    setTimeout(() => {
-      window.location.href = urls[index];
-    }, 300);
+    window.location.href = urls[index];
   };
 
   return (
@@ -111,7 +138,7 @@ const PricingSimple: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-6 md:gap-8 items-center max-w-6xl mx-auto">
 
           {/* Standard — po lewej, mniejszy, lekko przyciemniony */}
-          <div className="md:col-span-3 md:order-1 order-2 relative bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-md transition-shadow">
+          <div className="md:col-span-3 md:order-1 order-1 relative bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-md transition-shadow">
             <div className="mb-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-3">
                 Minimum
@@ -134,7 +161,7 @@ const PricingSimple: React.FC = () => {
               </div>
 
               <p className="text-xs text-gray-500 pt-3 border-t border-gray-100">
-                {Math.round(packages[0].price / 10)} zł/mies. (10 rat 0%)
+                {Math.round(packages[0].price / 10)} zł/mies. (10 rat 0% przez T-Pay)
               </p>
             </div>
 
@@ -150,14 +177,16 @@ const PricingSimple: React.FC = () => {
 
             <button
               onClick={() => handleCheckout(0, packages[0].name, packages[0].price)}
-              className="w-full py-3 px-5 rounded-full font-bold text-sm transition-colors duration-300 bg-transparent text-paulina-primary border border-paulina-primary hover:bg-paulina-primary hover:text-white"
+              disabled={isLoading !== null}
+              aria-busy={isLoading === 0}
+              className="w-full py-3 px-5 rounded-full font-bold text-sm transition-colors duration-300 bg-transparent text-paulina-primary border border-paulina-primary hover:bg-paulina-primary hover:text-white disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
             >
-              Wybierz
+              {isLoading === 0 ? <Spinner /> : 'Wybierz'}
             </button>
           </div>
 
           {/* Premium — w środku, WYSTAJĄCY, dominujący */}
-          <div className="md:col-span-5 md:order-2 order-1 relative bg-white rounded-3xl p-10 border-2 border-paulina-accent shadow-2xl md:-my-8 z-10">
+          <div className="md:col-span-5 md:order-2 order-2 relative bg-white rounded-3xl p-10 border-2 border-paulina-accent shadow-2xl md:-my-8 z-10">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <div className="bg-paulina-accent text-white px-7 py-2 rounded-full text-xs font-bold tracking-wider uppercase shadow-md">
                 Najczęściej wybierany
@@ -188,7 +217,7 @@ const PricingSimple: React.FC = () => {
               </div>
 
               <div className="text-sm text-gray-500 space-y-1 pt-4 border-t border-gray-100">
-                <p>lub <span className="font-semibold text-gray-700">{Math.round(packages[1].price / 10)} zł/mies.</span> (10 rat 0%)</p>
+                <p>lub <span className="font-semibold text-gray-700">{Math.round(packages[1].price / 10)} zł/mies.</span> (10 rat 0% przez T-Pay)</p>
                 <p className="text-paulina-accent font-semibold">
                   to {(packages[1].price / 365).toFixed(2).replace('.', ',')} zł dziennie przez rok
                 </p>
@@ -212,10 +241,18 @@ const PricingSimple: React.FC = () => {
 
             <button
               onClick={() => handleCheckout(1, packages[1].name, packages[1].price)}
-              className="w-full py-4 px-6 rounded-full font-bold text-base transition-colors duration-300 bg-paulina-primary text-white hover:bg-paulina-accent inline-flex items-center justify-center gap-2"
+              disabled={isLoading !== null}
+              aria-busy={isLoading === 1}
+              className="w-full py-4 px-6 rounded-full font-bold text-base transition-colors duration-300 bg-paulina-primary text-white hover:bg-paulina-accent inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Wybieram ten pakiet
-              <ChevronRight size={18} />
+              {isLoading === 1 ? (
+                <Spinner />
+              ) : (
+                <>
+                  Wybieram ten pakiet
+                  <ChevronRight size={18} />
+                </>
+              )}
             </button>
 
             <p className="font-hand text-lg text-paulina-accent text-center mt-5 leading-tight">
@@ -247,7 +284,7 @@ const PricingSimple: React.FC = () => {
               </div>
 
               <p className="text-xs text-gray-500 pt-3 border-t border-gray-100">
-                {Math.round(packages[2].price / 10)} zł/mies. (10 rat 0%)
+                {Math.round(packages[2].price / 10)} zł/mies. (10 rat 0% przez T-Pay)
               </p>
             </div>
 
@@ -263,9 +300,11 @@ const PricingSimple: React.FC = () => {
 
             <button
               onClick={() => handleCheckout(2, packages[2].name, packages[2].price)}
-              className="w-full py-3 px-5 rounded-full font-bold text-sm transition-colors duration-300 bg-transparent text-paulina-primary border border-paulina-primary hover:bg-paulina-primary hover:text-white"
+              disabled={isLoading !== null}
+              aria-busy={isLoading === 2}
+              className="w-full py-3 px-5 rounded-full font-bold text-sm transition-colors duration-300 bg-transparent text-paulina-primary border border-paulina-primary hover:bg-paulina-primary hover:text-white disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
             >
-              Wybierz
+              {isLoading === 2 ? <Spinner /> : 'Wybierz'}
             </button>
           </div>
         </div>

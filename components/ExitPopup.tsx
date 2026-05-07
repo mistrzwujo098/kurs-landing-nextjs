@@ -4,33 +4,74 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, BookOpen } from 'lucide-react';
 
+const SESSION_KEY = 'exitPopupShown_stronykursy_session';
+const STORAGE_KEY = 'exitPopupShown_stronykursy';
+
 const ExitPopup: React.FC = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Only on desktop (exit intent doesn't work on mobile)
-    if (window.innerWidth < 768) return;
+    const isMobile = window.innerWidth < 768;
 
-    // Check if already shown
-    if (localStorage.getItem('exitPopupShown_stronykursy')) return;
+    // Already shown — skip (desktop persists, mobile is per-session)
+    if (isMobile) {
+      if (sessionStorage.getItem(SESSION_KEY)) return;
+    } else {
+      if (localStorage.getItem(STORAGE_KEY)) return;
+    }
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0) {
-        setShow(true);
-        localStorage.setItem('exitPopupShown_stronykursy', 'true');
-      }
-    };
+    const mountTime = Date.now();
+    let scrollHandler: (() => void) | null = null;
+    let mouseLeaveHandler: ((e: MouseEvent) => void) | null = null;
 
-    // Delay adding listener to avoid triggering on page load
-    const timer = setTimeout(() => {
-      document.addEventListener('mouseleave', handleMouseLeave);
-    }, 5000);
+    if (isMobile) {
+      // Mobile: scroll-based trigger — >60% scroll AND >30s on page
+      scrollHandler = () => {
+        const elapsed = Date.now() - mountTime;
+        if (elapsed < 30000) return;
+        const scrolled = window.scrollY;
+        const threshold = document.body.scrollHeight * 0.6;
+        if (scrolled > threshold) {
+          setShow(true);
+          sessionStorage.setItem(SESSION_KEY, 'true');
+          if (scrollHandler) window.removeEventListener('scroll', scrollHandler);
+        }
+      };
+      window.addEventListener('scroll', scrollHandler, { passive: true });
+    } else {
+      // Desktop: exit-intent (mouse leaves top of viewport)
+      mouseLeaveHandler = (e: MouseEvent) => {
+        if (e.clientY <= 0) {
+          setShow(true);
+          localStorage.setItem(STORAGE_KEY, 'true');
+        }
+      };
+      const timer = setTimeout(() => {
+        if (mouseLeaveHandler) document.addEventListener('mouseleave', mouseLeaveHandler);
+      }, 5000);
+
+      return () => {
+        clearTimeout(timer);
+        if (mouseLeaveHandler) document.removeEventListener('mouseleave', mouseLeaveHandler);
+      };
+    }
 
     return () => {
-      clearTimeout(timer);
-      document.removeEventListener('mouseleave', handleMouseLeave);
+      if (scrollHandler) window.removeEventListener('scroll', scrollHandler);
     };
   }, []);
+
+  // Esc-to-close
+  useEffect(() => {
+    if (!show) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setShow(false);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [show]);
 
   if (!show) return null;
 
@@ -77,7 +118,7 @@ const ExitPopup: React.FC = () => {
 
             {/* CTA Button */}
             <a
-              href="https://paulinaodmatematyki.com/"
+              href="https://paulinaodmatematyki.com/pewniaki"
               className="flex items-center justify-center gap-2 w-full py-4 bg-paulina-accent hover:bg-paulina-primary text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
             >
               Zobacz minikursy od 97 zł

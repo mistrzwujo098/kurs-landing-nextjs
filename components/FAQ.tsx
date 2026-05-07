@@ -4,7 +4,19 @@ import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
 const FAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set([1]));
+
+  const toggleIndex = (index: number) => {
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) {
+        next.delete(index);
+      } else {
+        next.add(index);
+      }
+      return next;
+    });
+  };
 
   const faqs = [
     {
@@ -13,7 +25,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: 'Co jeśli kurs mi się nie spodoba?',
-      answer: 'Masz 30-dniową bezwarunkową gwarancję zwrotu pieniędzy. Jeśli uznasz, że kurs nie spełnia Twoich oczekiwań, wystarczy napisać, a zwrócimy Ci pieniądze bez zadawania pytań.'
+      answer: 'Napisz mail. Bez warunków, bez pytań, bez wyjaśniania. 30 dni od zakupu — pełny zwrot.'
     },
     {
       question: 'Co jeśli moje dziecko nie będzie chciało się uczyć?',
@@ -69,31 +81,44 @@ const FAQ: React.FC = () => {
         </div>
 
         <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
-          {faqs.map((faq, index) => (
-            <div key={index}>
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full py-5 text-left flex items-center justify-between gap-6 hover:text-paulina-accent transition-colors group"
-              >
-                <h3 className="font-semibold text-lg text-paulina-primary group-hover:text-paulina-accent transition-colors">
-                  {faq.question}
-                </h3>
-                {openIndex === index ? (
-                  <Minus className="text-paulina-accent flex-shrink-0" size={20} />
-                ) : (
-                  <Plus className="text-paulina-primary flex-shrink-0" size={20} />
-                )}
-              </button>
+          {faqs.map((faq, index) => {
+            const isOpen = openIndices.has(index);
+            return (
+              <div key={index}>
+                <button
+                  onClick={(e) => {
+                    toggleIndex(index);
+                    if (!isOpen) {
+                      e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                  }}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                  className="w-full py-5 text-left flex items-center justify-between gap-6 hover:text-paulina-accent transition-colors group focus-visible:outline-2 focus-visible:outline-paulina-accent focus-visible:outline-offset-2"
+                >
+                  <h3 className="font-semibold text-lg text-paulina-primary group-hover:text-paulina-accent transition-colors">
+                    {faq.question}
+                  </h3>
+                  {isOpen ? (
+                    <Minus className="text-paulina-accent flex-shrink-0" size={20} />
+                  ) : (
+                    <Plus className="text-paulina-primary flex-shrink-0" size={20} />
+                  )}
+                </button>
 
-              {openIndex === index && (
-                <div className="pb-6 pr-10 text-gray-700 leading-relaxed space-y-3">
-                  {faq.answer.split('\n').filter(p => p.trim()).map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                {isOpen && (
+                  <div
+                    id={`faq-answer-${index}`}
+                    className="pb-6 pr-10 text-gray-700 leading-relaxed space-y-3"
+                  >
+                    {faq.answer.split('\n').filter(p => p.trim()).map((paragraph, i) => (
+                      <p key={i}>{paragraph}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

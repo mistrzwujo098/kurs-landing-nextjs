@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import HeroSimple from '@/components/HeroSimple'
 import PossibilityInWorld from '@/components/PossibilityInWorld'
@@ -14,9 +14,7 @@ import CTAButton from '@/components/CTAButton'
 import ScrollProgress from '@/components/ScrollProgress'
 import WhatYouDiscover from '@/components/WhatYouDiscover'
 import WhyUs from '@/components/WhyUs'
-import JanuaryOffer from '@/components/JanuaryOffer'
 import WhosItFor from '@/components/WhosItFor'
-import QualifierGate from '@/components/QualifierGate'
 
 // Lazy load components below fold for better LCP
 const SectionPlaceholder = () => <div className="min-h-[400px]" />;
@@ -29,8 +27,6 @@ const Footer = dynamic(() => import('@/components/Footer'), { loading: SectionPl
 const ExitPopup = dynamic(() => import('@/components/ExitPopup'))
 
 export default function Home() {
-  const [showFullPage, setShowFullPage] = useState(false)
-
   // Track user engagement
   useEffect(() => {
     const startTime = Date.now()
@@ -48,10 +44,6 @@ export default function Home() {
       window.removeEventListener('beforeunload', handleUnload)
     }
   }, [])
-
-  if (!showFullPage) {
-    return <QualifierGate onShowFullPage={() => setShowFullPage(true)} courseType="egzamin" />
-  }
 
   return (
     <div className="App">
@@ -95,9 +87,6 @@ export default function Home() {
 
       {/* Image-heavy preview platformy — oddech wizualny przed ofertą */}
       <PlatformShowcase />
-
-      {/* Wartość oferty / bonusy */}
-      <JanuaryOffer />
 
       {/* Pricing */}
       <PricingSimple />

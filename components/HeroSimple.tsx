@@ -37,7 +37,7 @@ const HeroSimple: React.FC = () => {
 
             {/* Jeden malutki pretitle zamiast badge z gradientem */}
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-6">
-              Program Ósmoklasisty · Edycja 2026
+              Program Ósmoklasisty · Edycja 2026/2027
             </p>
 
             {/* Wielki headline z display fontem */}

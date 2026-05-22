@@ -4,14 +4,14 @@ import React from 'react';
 import Image from 'next/image';
 
 /**
- * Image-heavy sekcja przed Pricingiem — łamie rytm „pretitle + H2 + tekst".
+ * Image-heavy sekcja przed Pricingiem - łamie rytm „pretitle + H2 + tekst".
  * Asymetryczny grid zdjęć platformy z nadmiernym whitespace dla editorial feel.
  */
 const PlatformShowcase: React.FC = () => {
   return (
     <section className="py-20 md:py-28 bg-[#fbf9f7] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Nagłówek — asymetryczny, po lewej, nie wycentrowany */}
+        {/* Nagłówek - asymetryczny, po lewej, nie wycentrowany */}
         <div className="grid md:grid-cols-12 gap-8 mb-14 items-end">
           <div className="md:col-span-7">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
@@ -26,12 +26,12 @@ const PlatformShowcase: React.FC = () => {
           </div>
           <div className="md:col-span-5 md:pb-4">
             <p className="text-gray-600 leading-relaxed md:text-lg">
-              Platforma na komputerze, tablecie i telefonie. Wszystko, co dziecko ma pod ręką 24/7 — bez instalowania niczego.
+              Platforma na komputerze, tablecie i telefonie. Wszystko, co dziecko ma pod ręką 24/7 - bez instalowania niczego.
             </p>
           </div>
         </div>
 
-        {/* Asymetryczny grid — 1 duży + 2 mniejsze z offsetami */}
+        {/* Asymetryczny grid - 1 duży + 2 mniejsze z offsetami */}
         <div className="grid md:grid-cols-12 gap-4 md:gap-6">
           {/* Lewy duży */}
           <div className="md:col-span-7 md:row-span-2 rounded-3xl overflow-hidden border border-gray-200 relative group">
@@ -50,7 +50,7 @@ const PlatformShowcase: React.FC = () => {
             </div>
           </div>
 
-          {/* Prawy górny — lista tematów (obraz natywnie panoramiczny) */}
+          {/* Prawy górny - lista tematów (obraz natywnie panoramiczny) */}
           <div className="md:col-span-5 rounded-3xl overflow-hidden border border-gray-200 bg-white flex items-center justify-center p-4 aspect-[5/2] md:aspect-auto md:min-h-[140px]">
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2024/12/11fe3aae32f1e20994207d29fef4679257073333.webp"
@@ -62,7 +62,7 @@ const PlatformShowcase: React.FC = () => {
             />
           </div>
 
-          {/* Prawy dolny — z cytatem zamiast zdjęcia, breaks the image grid rhythm */}
+          {/* Prawy dolny - z cytatem zamiast zdjęcia, breaks the image grid rhythm */}
           <div className="md:col-span-5 rounded-3xl p-8 md:p-10 bg-paulina-bg-yellow border border-paulina-accent/20 flex flex-col justify-center">
             <p className="display-numeral text-5xl text-paulina-primary leading-none mb-3">
               1 500+
@@ -76,9 +76,9 @@ const PlatformShowcase: React.FC = () => {
           </div>
         </div>
 
-        {/* Drugi rząd — jeden pełny obraz + dwa małe */}
+        {/* Drugi rząd - jeden pełny obraz + dwa małe */}
         <div className="grid md:grid-cols-12 gap-4 md:gap-6 mt-6">
-          {/* Paulina — natywnie landscape, kontener landscape żeby nie ucinać twarzy */}
+          {/* Paulina - natywnie landscape, kontener landscape żeby nie ucinać twarzy */}
           <div className="md:col-span-4 rounded-3xl overflow-hidden border border-gray-200 bg-white aspect-[4/3]">
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2024/12/Paulina-od-Matematyki-2-1.webp"
@@ -89,7 +89,7 @@ const PlatformShowcase: React.FC = () => {
               unoptimized
             />
           </div>
-          {/* Platforma na różnych urządzeniach — natywnie szeroka, contain żeby nic nie uciąć */}
+          {/* Platforma na różnych urządzeniach - natywnie szeroka, contain żeby nic nie uciąć */}
           <div className="md:col-span-5 rounded-3xl overflow-hidden border border-gray-200 bg-[#fbf9f7] flex items-center justify-center p-4 aspect-[16/9] md:aspect-auto">
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2024/12/Paulina-od-Matematyki-1-1.webp"

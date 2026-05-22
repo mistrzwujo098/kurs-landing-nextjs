@@ -61,7 +61,7 @@ const ScrollProgress: React.FC = () => {
 
   return (
     <>
-      {/* Progress Bar — pojedyncza paulina-accent, bez gradientu */}
+      {/* Progress Bar - pojedyncza paulina-accent, bez gradientu */}
       <div className="fixed top-0 left-0 right-0 h-0.5 bg-transparent z-[60] pointer-events-none">
         <div
           className="h-full bg-paulina-accent transition-[width] duration-100"
@@ -69,7 +69,7 @@ const ScrollProgress: React.FC = () => {
         />
       </div>
 
-      {/* Desktop Navigation — cienkie kropki w pionowej linii (bez ikonek emoji) */}
+      {/* Desktop Navigation - cienkie kropki w pionowej linii (bez ikonek emoji) */}
       <nav
         aria-label="Nawigacja sekcji"
         className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"

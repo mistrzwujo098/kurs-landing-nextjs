@@ -87,7 +87,7 @@ const Solutions: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom statement — editorial typography */}
+        {/* Bottom statement - editorial typography */}
         <div className="text-center mt-16 max-w-2xl mx-auto">
           <h3 className="font-display text-3xl md:text-4xl text-paulina-primary mb-3 tracking-tight italic">
             Wysoki wynik na egzaminie.

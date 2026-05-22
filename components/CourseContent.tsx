@@ -82,7 +82,7 @@ const CourseContent: React.FC = () => {
         'Twierdzenie Pitagorasa',
         'Trójkąty równoboczne',
         'Trójkąty prostokątne o kątach 30 / 60° i 45 / 45°',
-        'Pola figur — cz. I i II',
+        'Pola figur - cz. I i II',
         'Przekątne w wielokątach i miary kątów figur foremnych',
         'Przystawanie trójkątów',
         'Dowodzenie',
@@ -107,8 +107,8 @@ const CourseContent: React.FC = () => {
         'Ściany, krawędzie, wierzchołki',
         'Pola i objętości z siatek brył',
         'Sześcian, prostopadłościan',
-        'Graniastosłupy — pole i objętość',
-        'Ostrosłupy — pole i objętość',
+        'Graniastosłupy - pole i objętość',
+        'Ostrosłupy - pole i objętość',
         'Zadania egzaminacyjne'
       ]
     }
@@ -119,7 +119,7 @@ const CourseContent: React.FC = () => {
     { icon: Video, title: 'Ponad 60 lekcji video', description: 'Masz do nich dostęp 24/7.', value: '997 zł' },
     { icon: Book, title: '1000 zadań z rozwiązaniami', description: 'Strategicznie dopasowane, by ułatwić zrozumienie tematu.', value: '200 zł' },
     { icon: Users, title: 'Grupa kursantów', description: 'W każdej chwili możesz zadać pytanie anonimowo i szybko dostać odpowiedź.', value: '300 zł' },
-    { icon: Shield, title: '30-dniowa gwarancja zwrotu', description: 'Bezwarunkowa gwarancja — bez pytań, bez tłumaczeń.', value: 'Bezcenne' },
+    { icon: Shield, title: '30-dniowa gwarancja zwrotu', description: 'Bezwarunkowa gwarancja - bez pytań, bez tłumaczeń.', value: 'Bezcenne' },
     { icon: Brain, title: 'Dla rodziców', description: '5 spotkań o stresie z psycholożką, specjalnie dla rodziców ósmoklasistów.', value: '500 zł' },
   ];
 
@@ -137,7 +137,7 @@ const CourseContent: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 mb-20 max-w-6xl mx-auto">
-          {/* Moduły — akordeon */}
+          {/* Moduły - akordeon */}
           <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
             {modules.map((module, index) => (
               <div key={index}>
@@ -218,7 +218,7 @@ const CourseContent: React.FC = () => {
           </div>
         </div>
 
-        {/* Dodatki w kursie — płaskie karty */}
+        {/* Dodatki w kursie - płaskie karty */}
         <div className="max-w-5xl mx-auto pt-12 border-t border-gray-200">
           <h3 className="font-display text-2xl md:text-3xl text-paulina-primary tracking-tight mb-10 text-center">
             Co jeszcze znajdziesz w kursie
@@ -229,7 +229,7 @@ const CourseContent: React.FC = () => {
                 key={index}
                 className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-paulina-accent/40 transition-colors"
               >
-                {/* Ikona w kwadracie z obwódką — wariant */}
+                {/* Ikona w kwadracie z obwódką - wariant */}
                 <div className="w-10 h-10 rounded-xl border border-paulina-accent/30 flex items-center justify-center mb-4">
                   <item.icon className="text-paulina-accent" size={18} />
                 </div>

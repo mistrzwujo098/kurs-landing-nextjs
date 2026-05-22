@@ -5,10 +5,10 @@ import { Check, X } from 'lucide-react';
 
 const PossibilityInWorld: React.FC = () => {
   const stats = [
-    { number: '24K+', label: 'Uczniów przeszło przez kurs', detail: 'od 2019 roku' },
-    { number: '84%', label: 'Średni wynik na egzaminie', detail: 'dane z 2024 roku' },
-    { number: '+40', label: 'Punktów średniego wzrostu', detail: 'pierwszy vs ostatni próbny' },
-    { number: '98%', label: 'Zadowolonych rodziców', detail: 'ankiety z 2024' },
+    { number: '24 000+', label: 'Uczniów przeszło przez kursy', detail: 'od 2019 roku' },
+    { number: '50%', label: 'Średnia krajowa E8 z matematyki', detail: 'CKE 2025 (modalna 17%)' },
+    { number: '~84%', label: 'Średnia moich kursantów (E8)', detail: 'raportowane przez rodziców' },
+    { number: '16 lat', label: 'Uczę matematyki online', detail: '93 000 subskrybentów YouTube' },
   ];
 
   return (
@@ -28,7 +28,7 @@ const PossibilityInWorld: React.FC = () => {
           </p>
         </div>
 
-        {/* Stats — wielkie typograficzne liczby zamiast kart z ikonami */}
+        {/* Stats - wielkie typograficzne liczby zamiast kart z ikonami */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 mb-20 border-t border-b border-gray-200 py-14">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center md:text-left">
@@ -45,7 +45,7 @@ const PossibilityInWorld: React.FC = () => {
           ))}
         </div>
 
-        {/* Content box — bez gradientu, jedna karta z dwukolumnowym layoutem */}
+        {/* Content box - bez gradientu, jedna karta z dwukolumnowym layoutem */}
         <div className="max-w-4xl mx-auto">
           <h3 className="font-display text-3xl md:text-4xl text-paulina-primary mb-10 tracking-tight text-center">
             Dlaczego nauka na ostatnią chwilę&nbsp;nie&nbsp;działa?
@@ -64,7 +64,7 @@ const PossibilityInWorld: React.FC = () => {
                 Uczenie się „jak do egzaminu”
               </h4>
               <p className="text-gray-700 leading-relaxed">
-                Widziałam setki uczniów, którzy zaczynali miesiąc przed egzaminem. Stres ogromny, efekty słabe. Wiedza „wpycha się” do głowy, ale nie zostaje. Po egzaminie — puste.
+                Widziałam setki uczniów, którzy zaczynali miesiąc przed egzaminem. Stres ogromny, efekty słabe. Wiedza „wpycha się” do głowy, ale nie zostaje. Po egzaminie - puste.
               </p>
             </div>
 
@@ -85,14 +85,14 @@ const PossibilityInWorld: React.FC = () => {
             </div>
           </div>
 
-          {/* Dlaczego online vs korepetycje — lista prosta, bez boxa z gradientem */}
+          {/* Dlaczego online vs korepetycje - lista prosta, bez boxa z gradientem */}
           <div className="border-t border-gray-200 pt-12">
             <h4 className="font-display text-2xl text-paulina-primary tracking-tight mb-8 text-center">
               Co daje kurs online ponad korepetycje
             </h4>
             <div className="grid md:grid-cols-2 gap-x-10 gap-y-5 max-w-3xl mx-auto">
               {[
-                { title: 'Dostęp 24/7', description: 'Dziecko uczy się wtedy, kiedy ma ochotę — nie czeka tygodnia na następne spotkanie.' },
+                { title: 'Dostęp 24/7', description: 'Dziecko uczy się wtedy, kiedy ma ochotę - nie czeka tygodnia na następne spotkanie.' },
                 { title: 'Natychmiastowa odpowiedź', description: 'Rozwiązujesz zadanie i od razu wiesz, czy dobrze. Bez czekania 3 dni na sprawdzenie.' },
                 { title: 'Śledzenie postępów', description: 'Widzisz, co już umiesz. Motywacja rośnie, bo widzisz liczby przed sobą.' },
                 { title: 'Nauka jak gra', description: 'Odhaczanie tematów daje satysfakcję. Wyzwanie, które chcesz ukończyć.' },

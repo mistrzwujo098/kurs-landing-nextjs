@@ -137,7 +137,7 @@ const PricingSimple: React.FC = () => {
         {/* ASYMETRYCZNY grid: Standard (3) | Premium (5, wystający) | Expert (4) */}
         <div className="grid md:grid-cols-12 gap-6 md:gap-8 items-center max-w-6xl mx-auto">
 
-          {/* Standard — po lewej, mniejszy, lekko przyciemniony */}
+          {/* Standard - po lewej, mniejszy, lekko przyciemniony */}
           <div className="md:col-span-3 md:order-1 order-1 relative bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-md transition-shadow">
             <div className="mb-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-3">
@@ -185,7 +185,7 @@ const PricingSimple: React.FC = () => {
             </button>
           </div>
 
-          {/* Premium — w środku, WYSTAJĄCY, dominujący */}
+          {/* Premium - w środku, WYSTAJĄCY, dominujący */}
           <div className="md:col-span-5 md:order-2 order-2 relative bg-white rounded-3xl p-10 border-2 border-paulina-accent shadow-2xl md:-my-8 z-10">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <div className="bg-paulina-accent text-white px-7 py-2 rounded-full text-xs font-bold tracking-wider uppercase shadow-md">
@@ -233,7 +233,7 @@ const PricingSimple: React.FC = () => {
               ))}
               {packages[1].notIncluded.map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-3 opacity-40">
-                  <span className="text-gray-400 flex-shrink-0 mt-0.5 text-lg leading-none">—</span>
+                  <span className="text-gray-400 flex-shrink-0 mt-0.5 text-lg leading-none"> - </span>
                   <span className="text-sm text-gray-500 leading-relaxed">{feature}</span>
                 </div>
               ))}
@@ -260,7 +260,7 @@ const PricingSimple: React.FC = () => {
             </p>
           </div>
 
-          {/* Expert — po prawej, normalny */}
+          {/* Expert - po prawej, normalny */}
           <div className="md:col-span-4 md:order-3 order-3 relative bg-white rounded-2xl p-7 border border-gray-200 hover:shadow-md transition-shadow">
             <div className="mb-6">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 mb-3">
@@ -309,7 +309,7 @@ const PricingSimple: React.FC = () => {
           </div>
         </div>
 
-        {/* Savings callout — pełna szerokość, pastelowe tło */}
+        {/* Savings callout - pełna szerokość, pastelowe tło */}
         <div className="max-w-3xl mx-auto mt-20 p-10 bg-paulina-bg-yellow rounded-3xl border border-paulina-accent/20">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-primary mb-3 text-center">
             Porównanie z korepetycjami

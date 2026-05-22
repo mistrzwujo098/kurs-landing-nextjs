@@ -29,7 +29,7 @@ const WhyUs: React.FC = () => {
           </p>
         </div>
 
-        {/* Comparison Table — prostsza, bez zielonego/czerwonego w nagłówku */}
+        {/* Comparison Table - prostsza, bez zielonego/czerwonego w nagłówku */}
         <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden mb-16 max-w-4xl mx-auto">
           <div className="grid grid-cols-3 font-semibold text-sm border-b border-gray-200">
             <div className="p-4 text-gray-500 uppercase tracking-wider text-xs">Kryterium</div>
@@ -61,7 +61,7 @@ const WhyUs: React.FC = () => {
           ))}
         </div>
 
-        {/* Unique Value Proposition — bez gradientu, z display fontem */}
+        {/* Unique Value Proposition - bez gradientu, z display fontem */}
         <div className="bg-paulina-primary text-white rounded-3xl p-10 md:p-14 max-w-4xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4 text-center">
             Metoda LAPS
@@ -75,24 +75,24 @@ const WhyUs: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 text-left">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">01 — Metoda</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">01 - Metoda</p>
               <h4 className="font-bold mb-2 text-lg">Oparta na neurobiologii</h4>
               <p className="text-sm text-white/75 leading-relaxed">
-                System spaced-repetition + aktywne przypominanie — gwarantuje zapamiętywanie 95% materiału.
+                System spaced-repetition i aktywne przypominanie. Pomaga zrozumieć zamiast wkuwać - bo wkuwane jednorazowo nie utrzymuje się do egzaminu.
               </p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">02 — Postępy</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">02 - Postępy</p>
               <h4 className="font-bold mb-2 text-lg">Panel rodzica + społeczność</h4>
               <p className="text-sm text-white/75 leading-relaxed">
                 Widzisz, co dziecko robi i kiedy. Ono trafia do grupy rówieśników, którzy się wzajemnie motywują.
               </p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">03 — Wynik</p>
-              <h4 className="font-bold mb-2 text-lg">98% zdawalność</h4>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">03 - Wynik</p>
+              <h4 className="font-bold mb-2 text-lg">Średnia 84% u moich kursantów</h4>
               <p className="text-sm text-white/75 leading-relaxed">
-                Tyle kursantów w ostatnim roczniku zdało z wynikiem, z którego są dumni.
+                Przy średniej krajowej E8 2025 na poziomie 50% (CKE). Większość moich kursantów kończy z wynikiem, z którego są dumni.
               </p>
             </div>
           </div>

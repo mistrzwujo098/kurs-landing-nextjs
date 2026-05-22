@@ -16,13 +16,13 @@ const HeroSimple: React.FC = () => {
 
   return (
     <section id="hero" className="relative bg-[#fbf9f7] pt-20 pb-16 px-4 sm:px-6 md:px-4 overflow-hidden">
-      {/* Subtelny akcent tła — pojedyncze ciepłe światło, zamiast 3-kolorowego gradientu */}
+      {/* Subtelny akcent tła - pojedyncze ciepłe światło, zamiast 3-kolorowego gradientu */}
       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[80%] bg-paulina-bg-yellow/40 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto">
         {/* Asymetryczny layout 7/5 zamiast 50/50 */}
         <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
-          {/* Lewa kolumna — 7/12 (większa, dominująca typografia) */}
+          {/* Lewa kolumna - 7/12 (większa, dominująca typografia) */}
           <div className="md:col-span-7 animate-fade-in-up">
             {/* Mobile-only avatar nad H1 */}
             <Image
@@ -42,17 +42,18 @@ const HeroSimple: React.FC = () => {
 
             {/* Wielki headline z display fontem */}
             <h1 className="font-display text-[clamp(2.5rem,6.5vw,5.5rem)] text-paulina-primary leading-[0.95] mb-8 tracking-tight">
-              84% bez&nbsp;korepetycji.
+              Egzamin ósmoklasisty.
               <span className="block italic text-paulina-accent font-normal">
-                Metoda LAPS.
+                Bez paniki, bez chaosu YouTube, bez korepetytora 70 zł/h.
               </span>
             </h1>
 
-            {/* Prosty subheadline, bez emoji, z typograficznym akcentem */}
+            {/* Subheadline z realnymi danymi CKE */}
+            <p className="text-lg sm:text-xl text-gray-700 mb-3 max-w-2xl leading-relaxed">
+              Średnia krajowa E8 z matematyki 2025: <span className="font-semibold text-paulina-primary">50%</span>, modalna 17% (CKE). Co trzeci ósmoklasista nie zdobył 30%.
+            </p>
             <p className="text-lg sm:text-xl text-gray-700 mb-10 max-w-2xl leading-relaxed">
-              Sprawdzona przez <span className="font-semibold text-paulina-primary">24 000 ósmoklasistów</span> metoda,
-              która sprawia, że dziecko samo siada do nauki.
-              Wystarczy 20&nbsp;minut&nbsp;dziennie.
+              Roczny program z metodą LAPS i lekcjami na żywo. <span className="font-semibold text-paulina-accent">20 minut dziennie</span>, przez 7-9 miesięcy. Większość kursantów kończy ze średnią <span className="font-semibold text-paulina-primary">~84%</span>.
             </p>
 
             {/* CTA + minimalny proof inline */}
@@ -77,19 +78,19 @@ const HeroSimple: React.FC = () => {
               </div>
             </div>
 
-            {/* Minimalny urgency — bez emoji, bez ramek */}
+            {/* Minimalny urgency - pre-launch nowy rok szkolny 2026/27 */}
             {daysToExam === 0 ? (
               <p className="text-sm text-gray-500 max-w-md">
-                Tegoroczny egzamin za nami. Zapisz się już dziś na edycję 2027 i&nbsp;zacznij przygotowania bez stresu — im wcześniej start, tym lżej.
+                Tegoroczny egzamin za nami. Edycja 2026/2027 ruszyła. Zaczniesz w wakacje, masz spokojny start. Zaczniesz we wrześniu, dogadasz się w marcu.
               </p>
             ) : (
               <p className="text-sm text-gray-500 max-w-md">
-                Do egzaminu zostało <span className="font-semibold text-paulina-primary">{daysToExam} dni</span>. Program wymaga min. 3 miesięcy pracy — im wcześniej start, tym lżej.
+                Do egzaminu zostało <span className="font-semibold text-paulina-primary">{daysToExam} dni</span>. Cały materiał to 7-9 miesięcy po 20 minut dziennie. Im wcześniej start, tym lżej.
               </p>
             )}
           </div>
 
-          {/* Prawa kolumna — 5/12 (mniejsze zdjęcie, offset) */}
+          {/* Prawa kolumna - 5/12 (mniejsze zdjęcie, offset) */}
           <div className="md:col-span-5 hidden md:block">
             <div className="relative">
               <Image
@@ -103,13 +104,13 @@ const HeroSimple: React.FC = () => {
                 className="rounded-2xl w-full max-w-md mx-auto shadow-lg"
               />
 
-              {/* Jedna liczba jako element graficzny — duża typografia zamiast "stat badge" */}
+              {/* Jedna liczba jako element graficzny - duża typografia zamiast "stat badge" */}
               <div className="absolute -bottom-8 -left-6 bg-white rounded-2xl px-6 py-5 shadow-xl border border-gray-100">
                 <p className="display-numeral text-[5rem] text-paulina-primary">84%</p>
                 <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Średni wynik kursantów</p>
               </div>
 
-              {/* Handwritten note — strzałka do zdjęcia, autorski touch */}
+              {/* Handwritten note - strzałka do zdjęcia, autorski touch */}
               <div className="absolute -top-4 -right-2 rotate-6 hidden lg:block">
                 <p className="font-hand text-2xl text-paulina-accent leading-tight text-right max-w-[140px]">
                   cześć,
@@ -136,7 +137,7 @@ const HeroSimple: React.FC = () => {
         </div>
       </div>
 
-      {/* Sticky mobile CTA — bez zmian, działa */}
+      {/* Sticky mobile CTA - bez zmian, działa */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white border-t border-gray-200 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] px-4 shadow-lg" data-testid="sticky-cta">
         <button
           onClick={scrollToPricing}

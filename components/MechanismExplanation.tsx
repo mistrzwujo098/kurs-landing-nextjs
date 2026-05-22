@@ -13,8 +13,8 @@ const MechanismExplanation: React.FC = () => {
       title: 'Uczenie przez zrozumienie',
       icon: Brain,
       duration: '5 min',
-      description: 'Nie pamięciowo — głębokie rozumienie.',
-      howItWorks: 'Zamiast suchego tłumaczenia wzorów pokazuję, dlaczego tak się dzieje. Dziecko nie uczy się „a² + b² = c²” — rozumie, dlaczego Pitagoras to odkrył.',
+      description: 'Nie pamięciowo - głębokie rozumienie.',
+      howItWorks: 'Zamiast suchego tłumaczenia wzorów pokazuję, dlaczego tak się dzieje. Dziecko nie uczy się „a² + b² = c²” - rozumie, dlaczego Pitagoras to odkrył.',
       childExperiences: [
         'Moment „aha!” gdy wszystko staje się jasne',
         'Widzi logiczne połączenia między tematami',
@@ -22,7 +22,7 @@ const MechanismExplanation: React.FC = () => {
         'Radość z odkrywania, nie męczenie się'
       ],
       parentSees: '„Teraz rozumiem!” zamiast „nie wiem jak”',
-      science: 'Neuroplastyczność — gdy rozumiemy mechanizm, mózg tworzy silniejsze połączenia neuronowe.'
+      science: 'Neuroplastyczność - gdy rozumiemy mechanizm, mózg tworzy silniejsze połączenia neuronowe.'
     },
     {
       letter: 'A',
@@ -31,7 +31,7 @@ const MechanismExplanation: React.FC = () => {
       icon: Target,
       duration: '5 min',
       description: 'Od teorii do pewności w działaniu.',
-      howItWorks: 'Każda lekcja kończy się praktyką. To nie bezmyślne rozwiązywanie — to inteligentne zastosowanie zrozumianych zasad w różnych sytuacjach.',
+      howItWorks: 'Każda lekcja kończy się praktyką. To nie bezmyślne rozwiązywanie - to inteligentne zastosowanie zrozumianych zasad w różnych sytuacjach.',
       childExperiences: [
         'Satysfakcja z samodzielnego rozwiązywania',
         'Pewność, że poradzi sobie z każdym zadaniem',
@@ -39,7 +39,7 @@ const MechanismExplanation: React.FC = () => {
         'Rozpoznawanie wzorców w zadaniach'
       ],
       parentSees: 'Dziecko samo bierze się za zadania domowe, bez przypominania',
-      science: 'Teoria flow — gdy umiejętności są proporcjonalne do wyzwania, osiągamy stan optymalnej koncentracji.'
+      science: 'Teoria flow - gdy umiejętności są proporcjonalne do wyzwania, osiągamy stan optymalnej koncentracji.'
     },
     {
       letter: 'P',
@@ -56,7 +56,7 @@ const MechanismExplanation: React.FC = () => {
         'Brak stresu przy rozwiązywaniu zadań'
       ],
       parentSees: 'Rozwiązuje zadania coraz szybciej i z coraz większą pewnością',
-      science: 'Krzywa zapominania Ebbinghausa — optymalne odstępy czasowe maksymalizują retencję.'
+      science: 'Krzywa zapominania Ebbinghausa - optymalne odstępy czasowe maksymalizują retencję.'
     },
     {
       letter: 'S',
@@ -73,7 +73,7 @@ const MechanismExplanation: React.FC = () => {
         'Motywację do dalszej nauki'
       ],
       parentSees: 'Dziecko samo opowiada o postępach i prosi o trudniejsze zadania',
-      science: 'Teoria samoskuteczności Bandury — wiara we własne możliwości zwiększa rzeczywistą skuteczność.'
+      science: 'Teoria samoskuteczności Bandury - wiara we własne możliwości zwiększa rzeczywistą skuteczność.'
     }
   ];
 
@@ -120,10 +120,10 @@ const MechanismExplanation: React.FC = () => {
           </div>
         </div>
 
-        {/* Content — dwie kolumny: tekst + szczegóły */}
+        {/* Content - dwie kolumny: tekst + szczegóły */}
         <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-100">
           <div className="grid md:grid-cols-12 gap-10 items-start">
-            {/* Lewa strona — nagłówek kroku */}
+            {/* Lewa strona - nagłówek kroku */}
             <div className="md:col-span-5">
               <p className="display-numeral text-[9rem] md:text-[11rem] text-paulina-accent/90 leading-none mb-3">
                 {current.letter}
@@ -139,7 +139,7 @@ const MechanismExplanation: React.FC = () => {
               </p>
             </div>
 
-            {/* Prawa strona — opis */}
+            {/* Prawa strona - opis */}
             <div className="md:col-span-7 space-y-6">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">

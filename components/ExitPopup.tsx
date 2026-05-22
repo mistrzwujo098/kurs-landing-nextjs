@@ -13,7 +13,7 @@ const ExitPopup: React.FC = () => {
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
 
-    // Already shown — skip (desktop persists, mobile is per-session)
+    // Already shown - skip (desktop persists, mobile is per-session)
     if (isMobile) {
       if (sessionStorage.getItem(SESSION_KEY)) return;
     } else {
@@ -25,7 +25,7 @@ const ExitPopup: React.FC = () => {
     let mouseLeaveHandler: ((e: MouseEvent) => void) | null = null;
 
     if (isMobile) {
-      // Mobile: scroll-based trigger — >60% scroll AND >30s on page
+      // Mobile: scroll-based trigger - >60% scroll AND >30s on page
       scrollHandler = () => {
         const elapsed = Date.now() - mountTime;
         if (elapsed < 30000) return;
@@ -112,7 +112,7 @@ const ExitPopup: React.FC = () => {
             </h3>
             <p className="text-paulina-primary/70 text-center mb-6">
               Może zacznij od mniejszego kroku? Minikursy od 97 zł to świetny sposób,
-              żeby zobaczyć czy metoda Pauliny działa — przejdziesz szybciej materiał
+              żeby zobaczyć czy metoda Pauliny działa - przejdziesz szybciej materiał
               i szybciej zauważysz efekty.
             </p>
 

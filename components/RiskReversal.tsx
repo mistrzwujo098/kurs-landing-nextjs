@@ -25,7 +25,7 @@ const RiskReversal: React.FC = () => {
   return (
     <section id="guarantee" className="py-20 md:py-28 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-        {/* Header — bez wielkiej zielonej ikony, display font */}
+        {/* Header - bez wielkiej zielonej ikony, display font */}
         <div className="text-center mb-16">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
             Gwarancja
@@ -35,11 +35,11 @@ const RiskReversal: React.FC = () => {
             <span className="block italic text-paulina-accent font-normal">Zero ryzyka dla Ciebie.</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Kupujesz kurs. Przez 30 dni testujesz. Jeśli nie pasuje — piszesz jedno zdanie i dostajesz 100% pieniędzy z powrotem.
+            Kupujesz kurs. Przez 30 dni testujesz. Jeśli nie pasuje - piszesz jedno zdanie i dostajesz 100% pieniędzy z powrotem.
           </p>
         </div>
 
-        {/* Główna obietnica — karta, ale bez border-4 zielony */}
+        {/* Główna obietnica - karta, ale bez border-4 zielony */}
         <div className="bg-[#fbf9f7] rounded-3xl p-8 md:p-12 mb-12 border border-gray-100">
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
@@ -50,7 +50,7 @@ const RiskReversal: React.FC = () => {
                 Szczerze: wiem, że kurs działa. <strong className="text-paulina-primary">98% rodziców poleca go znajomym.</strong> Zwroty zdarzają się rzadko (poniżej 2%).
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Ci, co zwracają, i tak by z kursu nie skorzystali — oszczędzam czas na wsparciu dla niezadowolonych, a Ty masz spokój, że nie ryzykujesz pieniędzy.
+                Ci, co zwracają, i tak by z kursu nie skorzystali - oszczędzam czas na wsparciu dla niezadowolonych, a Ty masz spokój, że nie ryzykujesz pieniędzy.
               </p>
             </div>
 
@@ -66,7 +66,7 @@ const RiskReversal: React.FC = () => {
           </div>
         </div>
 
-        {/* 3 kroki — z DUŻYMI typograficznymi numerami (display font) zamiast emoji */}
+        {/* 3 kroki - z DUŻYMI typograficznymi numerami (display font) zamiast emoji */}
         <div className="mb-12">
           <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-10">
             Jak wygląda proces zwrotu
@@ -88,7 +88,7 @@ const RiskReversal: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom statement — pojedyncza, mocna linia + podpis Pauliny */}
+        {/* Bottom statement - pojedyncza, mocna linia + podpis Pauliny */}
         <div className="text-center">
           <p className="font-display text-2xl md:text-3xl text-paulina-primary tracking-tight italic">
             Ty nie ryzykujesz nic.
@@ -97,7 +97,7 @@ const RiskReversal: React.FC = () => {
             </span>
           </p>
 
-          {/* Handwritten signature — Paulina osobiście */}
+          {/* Handwritten signature - Paulina osobiście */}
           <div className="mt-10 inline-flex flex-col items-center">
             <span className="font-hand text-5xl md:text-6xl text-paulina-accent leading-none -rotate-3">
               Paulina

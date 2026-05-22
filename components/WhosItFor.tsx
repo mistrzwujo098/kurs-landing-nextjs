@@ -68,7 +68,7 @@ const WhosItFor: React.FC = () => {
               ))}
             </ul>
             <p className="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-500 italic leading-relaxed">
-              Jeśli Twoje dziecko pasuje do lewej kolumny — ten program może zmienić wszystko.
+              Jeśli Twoje dziecko pasuje do lewej kolumny - ten program może zmienić wszystko.
             </p>
           </div>
         </div>

@@ -5,7 +5,7 @@ import React from 'react';
 const PullQuote: React.FC = () => {
   return (
     <section className="relative py-24 md:py-36 bg-paulina-primary text-white overflow-hidden">
-      {/* Subtelny ornament — wielki cudzysłów jako element graficzny */}
+      {/* Subtelny ornament - wielki cudzysłów jako element graficzny */}
       <div
         className="absolute top-6 left-4 md:left-16 font-display text-[14rem] md:text-[22rem] text-white/5 leading-none pointer-events-none select-none"
         aria-hidden="true"
@@ -18,7 +18,7 @@ const PullQuote: React.FC = () => {
           Opinia rodzica
         </p>
 
-        {/* Cytat — ogromny, Fraunces italic, pełna szerokość sekcji */}
+        {/* Cytat - ogromny, Fraunces italic, pełna szerokość sekcji */}
         <blockquote className="font-display text-[clamp(1.75rem,4.5vw,3.5rem)] leading-[1.15] italic text-white mb-12 text-balance">
           Kurs nauczył moją córkę, że matematyka ma sens.
           Po 3 miesiącach z 48% na 100% na egzaminie. Dopiero wtedy zrozumiałam,

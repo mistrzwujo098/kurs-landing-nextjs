@@ -16,7 +16,7 @@ const RealTestimonials: React.FC = () => {
       name: "Anna",
       role: "mama",
       rating: 5,
-      quote: "Kurs matematyki E8 u Pani Pauliny to absolutny strzał w dziesiątkę! Zajęcia prowadzone są w niezwykle przystępny sposób — Pani Paulina potrafi tłumaczyć nawet najtrudniejsze zagadnienia w sposób prosty, zrozumiały i... ciekawy! Dzięki niej moja córka nie tylko nadrobiła zaległości, ale też zaczęła wierzyć w siebie i polubiła matematykę.",
+      quote: "Kurs matematyki E8 u Pani Pauliny to absolutny strzał w dziesiątkę! Zajęcia prowadzone są w niezwykle przystępny sposób - Pani Paulina potrafi tłumaczyć nawet najtrudniejsze zagadnienia w sposób prosty, zrozumiały i... ciekawy! Dzięki niej moja córka nie tylko nadrobiła zaległości, ale też zaczęła wierzyć w siebie i polubiła matematykę.",
       result: "Z 48% na 100%",
       highlight: true
     },
@@ -53,7 +53,7 @@ const RealTestimonials: React.FC = () => {
       name: "Magda M.",
       role: "mama",
       rating: 5,
-      quote: "Kupiłam kurs ósmoklasisty dla mojej córki. Uczyła się przy moim wsparciu, a razem uczestniczyłyśmy również w spotkaniach na żywo. Pani Paulina w sposób bardzo klarowny tłumaczy zagadnienia, z szacunkiem podchodzi do uczniów i nigdy nie okazuje poirytowania ani zniecierpliwienia. Taka atmosfera zdecydowanie sprzyja efektywnej nauce. Kurs znacząco pomógł w przygotowaniach do egzaminu — wynik to aż 96%.",
+      quote: "Kupiłam kurs ósmoklasisty dla mojej córki. Uczyła się przy moim wsparciu, a razem uczestniczyłyśmy również w spotkaniach na żywo. Pani Paulina w sposób bardzo klarowny tłumaczy zagadnienia, z szacunkiem podchodzi do uczniów i nigdy nie okazuje poirytowania ani zniecierpliwienia. Taka atmosfera zdecydowanie sprzyja efektywnej nauce. Kurs znacząco pomógł w przygotowaniach do egzaminu - wynik to aż 96%.",
       result: "Egzamin na 96%",
     },
     {
@@ -75,7 +75,7 @@ const RealTestimonials: React.FC = () => {
       name: "Anna Kupper",
       role: "mama",
       rating: 5,
-      quote: "Polecam jako matka dziecka. Na początku podejście mojej córki było „a po co, przecież my to już przerabialiśmy”, za to po dwóch lekcjach zupełnie wszystko się zmieniło. Jak zapytałam — no i jak? Dostałam odpowiedź, że nawet spoko i że pokazane były ciekawe sposoby na rozwiązywanie zadań, o których w szkole się nie mówi lub po prostu nie pokazuje.",
+      quote: "Polecam jako matka dziecka. Na początku podejście mojej córki było „a po co, przecież my to już przerabialiśmy”, za to po dwóch lekcjach zupełnie wszystko się zmieniło. Jak zapytałam - no i jak? Dostałam odpowiedź, że nawet spoko i że pokazane były ciekawe sposoby na rozwiązywanie zadań, o których w szkole się nie mówi lub po prostu nie pokazuje.",
       result: "Zmiana nastawienia po 2 lekcjach",
     },
   ];
@@ -95,7 +95,7 @@ const RealTestimonials: React.FC = () => {
           </p>
         </div>
 
-        {/* Masonry — CSS columns z różnymi wysokościami kart (editorial, Pinterest-style) */}
+        {/* Masonry - CSS columns z różnymi wysokościami kart (editorial, Pinterest-style) */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
@@ -124,7 +124,7 @@ const RealTestimonials: React.FC = () => {
                 ))}
               </div>
 
-              {/* Result — typograficznie, bez pastylki */}
+              {/* Result - typograficznie, bez pastylki */}
               {testimonial.result && (
                 <p className={`font-display text-xl md:text-2xl mb-4 tracking-tight leading-tight ${
                   testimonial.highlight ? 'text-white' : 'text-paulina-primary'
@@ -159,7 +159,7 @@ const RealTestimonials: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom — typograficzny stat zamiast box */}
+        {/* Bottom - typograficzny stat zamiast box */}
         <div className="text-center mt-14 max-w-2xl mx-auto">
           <p className="display-numeral text-[6rem] md:text-[8rem] text-paulina-accent leading-none mb-2">
             98%
@@ -168,7 +168,7 @@ const RealTestimonials: React.FC = () => {
             rodziców poleca kurs znajomym
           </p>
           <p className="text-sm text-gray-500">
-            To nie są wybrane opinie — to losowa próbka z tysięcy otrzymanych w ostatnim roku.
+            To nie są wybrane opinie - to losowa próbka z tysięcy otrzymanych w ostatnim roku.
           </p>
         </div>
       </div>

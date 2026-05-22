@@ -70,7 +70,7 @@ const WhatYouDiscover: React.FC = () => {
           </p>
         </div>
 
-        {/* Grid kart — bez border-l-4 accent, bez shadow-md, tylko czyste karty z subtelną obwódką */}
+        {/* Grid kart - bez border-l-4 accent, bez shadow-md, tylko czyste karty z subtelną obwódką */}
         <div className="grid md:grid-cols-2 gap-5 mb-14">
           {discoveries.map((discovery, index) => (
             <div
@@ -95,7 +95,7 @@ const WhatYouDiscover: React.FC = () => {
           ))}
         </div>
 
-        {/* Extra — płaska lista zamiast "bg-yellow" boxa z emoji */}
+        {/* Extra - płaska lista zamiast "bg-yellow" boxa z emoji */}
         <div className="text-center max-w-4xl mx-auto pt-12 border-t border-gray-200">
           <p className="text-sm text-gray-500 mb-6">
             Oraz dodatki warte <span className="font-bold text-paulina-accent">2794 zł</span>:

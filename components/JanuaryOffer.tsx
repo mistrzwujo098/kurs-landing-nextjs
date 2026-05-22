@@ -43,7 +43,7 @@ const JanuaryOffer: React.FC = () => {
         'Interaktywny tracker postępów do wydruku',
         'Lista wszystkich tematów do opanowania',
         'Miejsce na notatki i własne cele',
-        'Motywacja wizualna — zaznaczaj postępy'
+        'Motywacja wizualna - zaznaczaj postępy'
       ]
     },
     {
@@ -66,13 +66,13 @@ const JanuaryOffer: React.FC = () => {
 
   return (
     <section id="january-offer" className="py-24 bg-paulina-bg-yellow/50 relative overflow-hidden">
-      {/* Ornament — wielki symbol gwiazdy/ozdobnika po stronie */}
+      {/* Ornament - wielki symbol gwiazdy/ozdobnika po stronie */}
       <div
         className="absolute -top-16 -right-16 w-96 h-96 rounded-full bg-paulina-accent/10 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <div className="relative max-w-5xl mx-auto px-4">
-        {/* Header — bez 3-kolorowego gradientu, bez sparkli */}
+        {/* Header - bez 3-kolorowego gradientu, bez sparkli */}
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
             Zawartość programu
@@ -85,7 +85,7 @@ const JanuaryOffer: React.FC = () => {
           </p>
         </div>
 
-        {/* Bonuses list — czyste karty bez cieni neonu */}
+        {/* Bonuses list - czyste karty bez cieni neonu */}
         <div className="space-y-4 mb-12">
           {bonuses.map((bonus, index) => (
             <div
@@ -138,7 +138,7 @@ const JanuaryOffer: React.FC = () => {
           ))}
         </div>
 
-        {/* Value summary — ciemna karta paulina-primary, bez gradientu */}
+        {/* Value summary - ciemna karta paulina-primary, bez gradientu */}
         <div className="bg-paulina-primary text-white rounded-3xl p-10 md:p-12">
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-6">
@@ -186,7 +186,7 @@ const JanuaryOffer: React.FC = () => {
         <div className="text-center mt-8">
           <p className="font-bold text-paulina-primary mb-1">30 dni bezwarunkowej gwarancji</p>
           <p className="text-sm text-gray-500 max-w-xl mx-auto leading-relaxed">
-            Jeśli w ciągu 30 dni uznasz, że kurs nie pomaga Twojemu dziecku — oddamy każdą złotówkę. Bez pytań.
+            Jeśli w ciągu 30 dni uznasz, że kurs nie pomaga Twojemu dziecku - oddamy każdą złotówkę. Bez pytań.
           </p>
         </div>
       </div>

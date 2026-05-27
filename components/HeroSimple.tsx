@@ -24,15 +24,15 @@ const HeroSimple: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
           {/* Lewa kolumna - 7/12 (większa, dominująca typografia) */}
           <div className="md:col-span-7 animate-fade-in-up">
-            {/* Mobile-only avatar nad H1 */}
+            {/* Mobile-only avatar nad H1 - powiększony z 100px do 180px dla lepszej widoczności na ATF */}
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2025/06/hero-1.webp"
               alt="Paulina, autorka kursu"
-              width={200}
-              height={200}
+              width={360}
+              height={360}
               priority
               unoptimized
-              className="md:hidden max-w-[100px] rounded-full mx-auto mb-6 shadow-md"
+              className="md:hidden w-[180px] h-[180px] object-cover rounded-full mx-auto mb-6 shadow-md"
             />
 
             {/* Jeden malutki pretitle zamiast badge z gradientem */}

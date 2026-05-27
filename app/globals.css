@@ -27,6 +27,13 @@ body {
   line-height: 1.6;
 }
 
+/* Mobile sticky CTA spacing - prevents content cut by fixed sticky-cta bar (~74px + safe area) */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
+
 .font-display {
   font-family: var(--font-display), Georgia, 'Times New Roman', serif;
   font-optical-sizing: auto;

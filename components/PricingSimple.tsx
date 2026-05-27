@@ -160,9 +160,10 @@ const PricingSimple: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-xs text-gray-500 pt-3 border-t border-gray-100">
-                {Math.round(packages[0].price / 10)} zł/mies. (10 rat 0% przez T-Pay)
-              </p>
+              <div className="text-xs text-gray-500 pt-3 border-t border-gray-100 space-y-0.5">
+                <p>{Math.round(packages[0].price / 10)} zł/mies. (raty Pekao SA: 10x 0% RRSO)</p>
+                <p>lub PayPo - zapłać za 30 dni (bez odsetek)</p>
+              </div>
             </div>
 
             <div className="space-y-2 mb-6">
@@ -217,7 +218,8 @@ const PricingSimple: React.FC = () => {
               </div>
 
               <div className="text-sm text-gray-500 space-y-1 pt-4 border-t border-gray-100">
-                <p>lub <span className="font-semibold text-gray-700">{Math.round(packages[1].price / 10)} zł/mies.</span> (10 rat 0% przez T-Pay)</p>
+                <p>lub <span className="font-semibold text-gray-700">{Math.round(packages[1].price / 10)} zł/mies.</span> (raty Pekao SA: 10x 0% RRSO)</p>
+                <p>lub zapłać za 30 dni z PayPo (bez odsetek)</p>
                 <p className="text-paulina-accent font-semibold">
                   to {(packages[1].price / 365).toFixed(2).replace('.', ',')} zł dziennie przez rok
                 </p>
@@ -283,9 +285,10 @@ const PricingSimple: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-xs text-gray-500 pt-3 border-t border-gray-100">
-                {Math.round(packages[2].price / 10)} zł/mies. (10 rat 0% przez T-Pay)
-              </p>
+              <div className="text-xs text-gray-500 pt-3 border-t border-gray-100 space-y-0.5">
+                <p>{Math.round(packages[2].price / 10)} zł/mies. (raty Pekao SA: 10x 0% RRSO)</p>
+                <p>lub PayPo - zapłać za 30 dni (bez odsetek)</p>
+              </div>
             </div>
 
             <div className="space-y-2 mb-6">

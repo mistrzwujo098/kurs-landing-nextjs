@@ -59,13 +59,13 @@ export default function Home() {
       {/* Liczby + „Dlaczego teraz" */}
       <PossibilityInWorld />
 
-      {/* Pull quote — przerwa rytmu, głos rodzica */}
+      {/* Pull quote - przerwa rytmu, głos rodzica */}
       <PullQuote />
 
       {/* Diagnoza problemu */}
       <Problems />
 
-      {/* Transformacja — co osiągnie dziecko */}
+      {/* Transformacja - co osiągnie dziecko */}
       <Solutions />
 
       {/* Co konkretnie odkryje */}
@@ -80,7 +80,7 @@ export default function Home() {
       {/* Zawartość kursu */}
       <CourseContent />
 
-      {/* Opinie — masonry */}
+      {/* Opinie - masonry */}
       <RealTestimonials />
 
       {/* Gwarancja (risk reversal) */}
@@ -89,7 +89,7 @@ export default function Home() {
       {/* Dla kogo / dla kogo nie */}
       <WhosItFor />
 
-      {/* Image-heavy preview platformy — oddech wizualny przed ofertą */}
+      {/* Image-heavy preview platformy - oddech wizualny przed ofertą */}
       <PlatformShowcase />
 
       {/* Pricing */}

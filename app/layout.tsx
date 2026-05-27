@@ -34,9 +34,9 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL('https://paulinaodmatematyki.com'),
   alternates: { canonical: '/egzamin' },
-  title: 'Kurs Egzamin Ósmoklasisty 2026 – zdaj na 80%+ bez korepetycji',
+  title: 'Kurs Egzamin Ósmoklasisty 2026 - zdaj na 80%+ bez korepetycji',
   description:
-    'Program Ósmoklasisty od Pauliny od Matematyki. Kurs online za 999 zł – wideo lekcje, arkusze próbne, system LAPS. 24 000+ uczniów, 99% zdawalność.',
+    'Program Ósmoklasisty od Pauliny od Matematyki. Kurs online za 999 zł - wideo lekcje, arkusze próbne, system LAPS. 24 000+ uczniów, 99% zdawalność.',
   icons: {
     icon: '/egzamin/favicon.ico',
     apple: '/egzamin/icon.png',
@@ -50,7 +50,7 @@ export const viewport: Viewport = {
 const courseJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Program Ósmoklasisty 2026 – Paulina od Matematyki',
+  name: 'Program Ósmoklasisty 2026 - Paulina od Matematyki',
   description:
     'Kompleksowy kurs przygotowujący do egzaminu ósmoklasisty z matematyki. System LAPS, wideo lekcje, arkusze próbne. Zdaj na ponad 80% bez stresu.',
   url: 'https://paulinaodmatematyki.com/egzamin',
@@ -72,8 +72,8 @@ const courseJsonLd = {
       'Orły Edukacji 2024',
     ],
   },
-  educationalLevel: 'Szkoła podstawowa – klasa 8',
-  about: { '@type': 'Thing', name: 'Matematyka – egzamin ósmoklasisty' },
+  educationalLevel: 'Szkoła podstawowa - klasa 8',
+  about: { '@type': 'Thing', name: 'Matematyka - egzamin ósmoklasisty' },
   hasCourseInstance: {
     '@type': 'CourseInstance',
     courseMode: 'online',

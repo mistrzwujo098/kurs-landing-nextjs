@@ -12,7 +12,7 @@ const Problems: React.FC = () => {
         'Nieefektywne metody uczenia się',
         'Problemy z organizacją materiału',
         'Narastający stres i presja',
-        'Konflikty rodzic–dziecko o naukę',
+        'Konflikty rodzic-dziecko o naukę',
         'Brak systematyczności',
         'Marnowanie czasu na złe metody',
         'Rosnąca frustracja',

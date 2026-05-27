@@ -12,12 +12,12 @@ const RiskReversal: React.FC = () => {
     },
     {
       num: '02',
-      title: 'Dostajesz potwierdzenie w 24–48h',
+      title: 'Dostajesz potwierdzenie w 24-48h',
       description: 'Osobiście czytam każdy taki mail. Odpowiadam szybko, bez prób przekonywania.'
     },
     {
       num: '03',
-      title: 'Pieniądze wracają w 3–5 dni',
+      title: 'Pieniądze wracają w 3-5 dni',
       description: 'Przelew na to samo konto, z którego zapłaciłeś. Kwota 1:1, bez potrąceń.'
     }
   ];

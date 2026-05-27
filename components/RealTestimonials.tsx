@@ -39,7 +39,7 @@ const RealTestimonials: React.FC = () => {
       role: "uczennica",
       rating: 5,
       quote: "Z e8 z matematyki uzyskałam 80%! Chcę Pani bardzo podziękować za kurs przygotowawczy z matematyki, ponieważ to dzięki niemu uzyskałam tak wysoki wynik. Na początku roku szkolnego moje wyniki z próbnych egzaminów wynosiły zaledwie 30%, czasem 23%, a teraz aż 80%.",
-      result: "Z 23–30% na 80%",
+      result: "Z 23-30% na 80%",
     },
     {
       name: "Urszula Godlewska",

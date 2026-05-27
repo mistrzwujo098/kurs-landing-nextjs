@@ -5,7 +5,7 @@ import { X, CheckCircle } from 'lucide-react';
 
 const WhyUs: React.FC = () => {
   const comparisons = [
-    { feature: 'Czas nauki dziennie', others: '2–3 godziny męczarni', us: '20 minut efektywnej nauki' },
+    { feature: 'Czas nauki dziennie', others: '2-3 godziny męczarni', us: '20 minut efektywnej nauki' },
     { feature: 'Koszt miesięczny', others: '600 zł (4 korepetycje)', us: '150 zł (lub jednorazowo taniej)' },
     { feature: 'Kto się uczy', others: 'Rodzic musi pomagać', us: 'Dziecko uczy się samo' },
     { feature: 'Motywacja', others: 'Kłótnie i przymus', us: 'System nagród jak w grze' },

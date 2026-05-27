@@ -109,7 +109,7 @@ export default function QualifierGate({ onShowFullPage, courseType }: QualifierG
             <ul className="space-y-3 mb-8 text-sm text-gray-700">
               <li className="flex items-start gap-3">
                 <Check className="text-paulina-accent flex-shrink-0 mt-0.5" size={16} />
-                <span>Szybkie efekty - dodaj <strong>10–20%</strong> do wyniku</span>
+                <span>Szybkie efekty - dodaj <strong>10-20%</strong> do wyniku</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="text-paulina-accent flex-shrink-0 mt-0.5" size={16} />

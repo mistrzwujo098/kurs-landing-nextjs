@@ -61,8 +61,8 @@ const FAQ: React.FC = () => {
       answer: 'To właśnie zaleta tego kursu - nie musisz siedzieć z dzieckiem. System jest w 100% samodzielny. W razie czego masz stały dostęp do platformy i możesz kontrolować postępy.'
     },
     {
-      question: 'Czy to dla dziecka, które ma słabą ocenę z matematyki (2–3)?',
-      answer: 'Tak. 40% moich uczniów zaczynało z oceną 2–3. Metoda LAPS jest stworzona właśnie dla dzieci, które „nie kumają matmy”. Zaczynasz od podstaw, małymi krokami. Przykład: Kasia miała 2,5 przez cały rok. Po 5 miesiącach w kursie - egzamin na 78%. Możliwe, bo rozumie mechanizm, nie wkuwa na pamięć.'
+      question: 'Czy to dla dziecka, które ma słabą ocenę z matematyki (2-3)?',
+      answer: 'Tak. 40% moich uczniów zaczynało z oceną 2-3. Metoda LAPS jest stworzona właśnie dla dzieci, które „nie kumają matmy”. Zaczynasz od podstaw, małymi krokami. Przykład: Kasia miała 2,5 przez cały rok. Po 5 miesiącach w kursie - egzamin na 78%. Możliwe, bo rozumie mechanizm, nie wkuwa na pamięć.'
     },
     {
       question: 'Czy kurs jest zgodny z aktualną podstawą programową?',

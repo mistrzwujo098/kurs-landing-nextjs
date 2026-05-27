@@ -44,7 +44,7 @@ const ParentTestimonials: React.FC = () => {
       rating: 5,
       beforeScore: 48,
       afterScore: 100,
-      quote: "Kurs matematyki E8 u Pani Pauliny to absolutny strzał w dziesiątkę! Zajęcia prowadzone są w niezwykle przystępny sposób – Pani Paulina potrafi tłumaczyć nawet najtrudniejsze zagadnienia w sposób prosty, zrozumiały i... ciekawy! Dzięki niej moja córka nie tylko nadrobiła zaległości, ale też zaczęła wierzyć w siebie i polubiła matematykę. Z 48% na początku mamy 100%!!!",
+      quote: "Kurs matematyki E8 u Pani Pauliny to absolutny strzał w dziesiątkę! Zajęcia prowadzone są w niezwykle przystępny sposób - Pani Paulina potrafi tłumaczyć nawet najtrudniejsze zagadnienia w sposób prosty, zrozumiały i... ciekawy! Dzięki niej moja córka nie tylko nadrobiła zaległości, ale też zaczęła wierzyć w siebie i polubiła matematykę. Z 48% na początku mamy 100%!!!",
       highlight: "48% → 100%",
       date: ""
     },
@@ -83,7 +83,7 @@ const ParentTestimonials: React.FC = () => {
       rating: 5,
       beforeScore: 0,
       afterScore: 96,
-      quote: "Kupiłam kurs ósmoklasisty dla mojej córki. Uczyła się przy moim wsparciu, a razem uczestniczyłyśmy również w spotkaniach na żywo. Pani Paulina w sposób bardzo klarowny tłumaczy zagadnienia, z szacunkiem podchodzi do uczniów i nigdy nie okazuje poirytowania ani zniecierpliwienia. Taka atmosfera zdecydowanie sprzyja efektywnej nauce. Kurs znacząco pomógł w przygotowaniach do egzaminu – wynik to aż 96%!",
+      quote: "Kupiłam kurs ósmoklasisty dla mojej córki. Uczyła się przy moim wsparciu, a razem uczestniczyłyśmy również w spotkaniach na żywo. Pani Paulina w sposób bardzo klarowny tłumaczy zagadnienia, z szacunkiem podchodzi do uczniów i nigdy nie okazuje poirytowania ani zniecierpliwienia. Taka atmosfera zdecydowanie sprzyja efektywnej nauce. Kurs znacząco pomógł w przygotowaniach do egzaminu - wynik to aż 96%!",
       highlight: "Wynik 96%",
       date: ""
     },

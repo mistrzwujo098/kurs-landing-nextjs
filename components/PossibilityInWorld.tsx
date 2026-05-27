@@ -77,7 +77,7 @@ const PossibilityInWorld: React.FC = () => {
                 </p>
               </div>
               <h4 className="font-bold text-lg mb-3">
-                20 minut dziennie przez 6–8 miesięcy
+                20 minut dziennie przez 6-8 miesięcy
               </h4>
               <p className="text-white/85 leading-relaxed">
                 Mózg ma czas na zrozumienie. Wiedza buduje się powoli, ale zostaje na lata. Większość uczniów po roku pamięta więcej niż ci, którzy wkuwali.

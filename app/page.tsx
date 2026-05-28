@@ -25,7 +25,9 @@ const RealTestimonials = dynamic(() => import('@/components/RealTestimonials'), 
 const RiskReversal = dynamic(() => import('@/components/RiskReversal'), { loading: SectionPlaceholder })
 const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'), { loading: SectionPlaceholder })
 const Footer = dynamic(() => import('@/components/Footer'), { loading: SectionPlaceholder })
-const ExitPopup = dynamic(() => import('@/components/ExitPopup'))
+// ExitPopup wyłączony 2026-05-29: downsell do minikursów kanibalizował sprzedaż 999 zł i nie zbierał maila.
+// Wróci jako opt-in z lead magnetem (faza opt-in / lead-magnety). Odkomentuj import + <ExitPopup /> niżej, by przywrócić.
+// const ExitPopup = dynamic(() => import('@/components/ExitPopup'))
 
 export default function Home() {
   // Track user engagement
@@ -103,7 +105,7 @@ export default function Home() {
 
       <Footer />
       <CTAButton />
-      <ExitPopup />
+      {/* <ExitPopup /> wyłączony 2026-05-29 - patrz komentarz przy imporcie */}
     </div>
   )
 }

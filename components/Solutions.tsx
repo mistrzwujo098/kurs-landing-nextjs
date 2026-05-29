@@ -23,16 +23,16 @@ const Solutions: React.FC = () => {
     {
       label: 'Po przerobieniu całego kursu',
       items: [
-        'Opanowało wszystkie kluczowe zagadnienia',
+        'Opanowało kluczowe zagadnienia z egzaminu',
         'Ma wypracowany system nauki',
-        'Potrafi rozwiązać każdy typ zadania',
-        'Zna wszystkie wymagane wzory',
+        'Radzi sobie z typami zadań, które realnie są na egzaminie',
+        'Zna wzory wymagane na egzaminie',
         'Umie zarządzać czasem podczas nauki',
         'Ma pewność siebie w matematyce',
         'Rozumie, gdzie może stracić punkty',
         'Wie, jak sprawdzać swoje rozwiązania',
         'Ma techniki na radzenie sobie ze stresem',
-        'Jest przygotowane na każdą sytuację'
+        'Wie, jak podejść do trudnego zadania zamiast panikować'
       ]
     },
     {
@@ -40,7 +40,7 @@ const Solutions: React.FC = () => {
       items: [
         'Spokojnie podchodzi do arkusza',
         'Wie, od czego zacząć',
-        'Rozpoznaje wszystkie typy zadań',
+        'Rozpoznaje typy zadań, które ćwiczyło w kursie',
         'Efektywnie zarządza czasem',
         'Sprawnie rozwiązuje zadania',
         'Ma czas na sprawdzenie',
@@ -56,7 +56,7 @@ const Solutions: React.FC = () => {
     <section id="solutions" className="py-20 bg-[#fbf9f7]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Co osiągnie Twoje dziecko
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">

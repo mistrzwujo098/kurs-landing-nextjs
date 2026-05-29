@@ -84,15 +84,15 @@ const MechanismExplanation: React.FC = () => {
     <section id="mechanism" className="py-24 bg-[#fbf9f7]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Metoda
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
-            Jak działa system <span className="italic text-paulina-accent font-normal">LAPS</span>
+            Jak działa system <span className="italic text-paulina-accent-text font-normal">LAPS</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
             To nie jest magia. To nauka o tym, jak mózg dziecka najłatwiej przyswaja matematykę.
-            <span className="block text-paulina-primary font-semibold mt-2">20 minut dziennie. 4 kroki. Gwarantowany efekt.</span>
+            <span className="block text-paulina-primary font-semibold mt-2">20 minut dziennie. 4 kroki. Metoda sprawdzona z 24 000 kursantami.</span>
           </p>
         </div>
 
@@ -192,7 +192,7 @@ const MechanismExplanation: React.FC = () => {
             Teraz znasz mechanizm.
           </h3>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            Sprawdzone na 24 000 uczniach. 84% średniego wyniku. 30 dni gwarancji, gdyby coś nie pasowało.
+            Sprawdzone z 24 000 kursantami. Średnia 84% z ankiet kursantów po otrzymaniu wyniku. 30 dni gwarancji zwrotu, gdyby coś nie pasowało.
           </p>
           <button
             onClick={() => {

@@ -27,12 +27,12 @@ const RiskReversal: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4">
         {/* Header - bez wielkiej zielonej ikony, display font */}
         <div className="text-center mb-16">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Gwarancja
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-6 tracking-tight">
             30 dni na decyzję.
-            <span className="block italic text-paulina-accent font-normal">Zero ryzyka dla Ciebie.</span>
+            <span className="block italic text-paulina-accent-text font-normal">Zero ryzyka dla Ciebie.</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Kupujesz kurs. Przez 30 dni testujesz. Jeśli nie pasuje - piszesz jedno zdanie i dostajesz 100% pieniędzy z powrotem.

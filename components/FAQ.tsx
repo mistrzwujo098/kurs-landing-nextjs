@@ -82,7 +82,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: 'Jak to się ma do korepetycji?',
-      answer: 'Korepetycje: 150 zł/h, raz w tygodniu, dziecko musi czekać na następne spotkanie (łącznie ~3600 zł za 6 miesięcy).\n\nKurs: 1499 zł (cały rok), dostęp 24/7, dziecko uczy się wtedy, kiedy chce. Pytanie ma o 22:00? Zadaje w grupie, odpowiedź w 10 minut.\n\nNajlepszy wynik: kurs + korepetycje 1×/miesiąc - najskuteczniejsza kombinacja, jeśli dziecko potrzebuje indywidualnego wsparcia.'
+      answer: 'Korepetycje: około 70 zł/h, raz w tygodniu, dziecko musi czekać na następne spotkanie (łącznie około 2 240 zł za 8 miesięcy, scenariusz szacunkowy).\n\nKurs: 999 zł (pakiet Standard, cały rok), dostęp 24/7, dziecko uczy się wtedy, kiedy chce. Pytanie ma o 22:00? Zadaje w grupie, odpowiedź szybko.\n\nNajlepszy wynik: kurs + korepetycje 1×/miesiąc - skuteczna kombinacja, jeśli dziecko potrzebuje indywidualnego wsparcia.'
     },
     {
       question: 'Co jeśli dziecko nie skończy kursu?',
@@ -96,7 +96,7 @@ const FAQ: React.FC = () => {
     <section id="faq" className="py-20 md:py-28 bg-[#fbf9f7]">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Pytania i wątpliwości
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-4 tracking-tight">

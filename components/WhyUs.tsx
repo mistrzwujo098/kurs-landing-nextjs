@@ -6,9 +6,9 @@ import { X, CheckCircle } from 'lucide-react';
 const WhyUs: React.FC = () => {
   const comparisons = [
     { feature: 'Czas nauki dziennie', others: '2-3 godziny męczarni', us: '20 minut efektywnej nauki' },
-    { feature: 'Koszt miesięczny', others: '600 zł (4 korepetycje)', us: '150 zł (lub jednorazowo taniej)' },
+    { feature: 'Koszt miesięczny', others: 'około 280 zł (4 korepetycje po 70 zł)', us: 'jednorazowo 999 zł na cały rok' },
     { feature: 'Kto się uczy', others: 'Rodzic musi pomagać', us: 'Dziecko uczy się samo' },
-    { feature: 'Motywacja', others: 'Kłótnie i przymus', us: 'System nagród jak w grze' },
+    { feature: 'Motywacja', others: 'Trzeba pilnować i przypominać', us: 'System nagród jak w grze' },
     { feature: 'Postępy', others: 'Nie wiesz co się dzieje', us: 'Stały dostęp rodziców do kursu' },
     { feature: 'Dostępność', others: 'Trzeba jeździć, czekać', us: '24 / 7 z każdego miejsca' },
     { feature: 'Gwarancja', others: 'Żadnej', us: '30 dni zwrotu pieniędzy' }
@@ -18,11 +18,11 @@ const WhyUs: React.FC = () => {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Porównanie
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
-            Dlaczego <span className="italic text-paulina-accent font-normal">24 000 rodziców</span> wybrało ten kurs
+            Dlaczego <span className="italic text-paulina-accent-text font-normal">24 000 rodziców</span> wybrało ten kurs
           </h2>
           <p className="text-lg text-gray-600">
             Porównaj sam i zobacz, dlaczego tradycyjne metody zawodzą.
@@ -90,9 +90,9 @@ const WhyUs: React.FC = () => {
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">03 - Wynik</p>
-              <h4 className="font-bold mb-2 text-lg">Średnia 84% u moich kursantów</h4>
+              <h4 className="font-bold mb-2 text-lg">Średnia 84% z ankiet kursantów</h4>
               <p className="text-sm text-white/75 leading-relaxed">
-                Przy średniej krajowej E8 2025 na poziomie 50% (CKE). Większość moich kursantów kończy z wynikiem, z którego są dumni.
+                Z ankiet kursantów po otrzymaniu wyniku, przy średniej krajowej E8 2025 na poziomie 50% (CKE). Większość moich kursantów kończy z wynikiem, z którego są dumni.
               </p>
             </div>
           </div>

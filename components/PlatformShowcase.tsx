@@ -14,12 +14,12 @@ const PlatformShowcase: React.FC = () => {
         {/* Nagłówek - asymetryczny, po lewej, nie wycentrowany */}
         <div className="grid md:grid-cols-12 gap-8 mb-14 items-end">
           <div className="md:col-span-7">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
               Wnętrze kursu
             </p>
             <h2 className="font-display text-4xl md:text-6xl text-paulina-primary tracking-tight leading-[1.05]">
               Zobacz jak&nbsp;to&nbsp;wygląda
-              <span className="block italic text-paulina-accent font-normal mt-1">
+              <span className="block italic text-paulina-accent-text font-normal mt-1">
                 od środka
               </span>
             </h2>

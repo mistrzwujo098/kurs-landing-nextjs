@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/egzamin' },
   title: 'Kurs Egzamin Ósmoklasisty 2026 - zdaj na 80%+ bez korepetycji',
   description:
-    'Program Ósmoklasisty od Pauliny od Matematyki. Kurs online za 999 zł - wideo lekcje, arkusze próbne, system LAPS. 24 000+ uczniów, 99% zdawalność.',
+    'Program Ósmoklasisty od Pauliny od Matematyki. Kurs online za 999 zł - wideo lekcje, arkusze próbne, system LAPS. 24 000+ uczniów, 4,9/5 z 693 opinii, 30 dni gwarancji zwrotu.',
   icons: {
     icon: '/egzamin/favicon.ico',
     apple: '/egzamin/icon.png',
@@ -88,7 +88,7 @@ const courseJsonLd = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
-    reviewCount: '24000',
+    reviewCount: '693',
   },
 }
 
@@ -101,7 +101,6 @@ export default function RootLayout({
     <html lang="pl" className={`${varelaRound.variable} ${inter.variable} ${fraunces.variable} ${caveat.variable}`}>
       <head>
         <link rel="preconnect" href="https://paulinaodmatematyki.com" />
-        <link rel="preconnect" href="https://assets.mailerlite.com" />
 
         {/* Course structured data */}
         <script

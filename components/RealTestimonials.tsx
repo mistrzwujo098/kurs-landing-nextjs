@@ -84,7 +84,7 @@ const RealTestimonials: React.FC = () => {
     <section id="testimonials" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Opinie
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-4 tracking-tight">

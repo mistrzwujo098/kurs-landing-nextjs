@@ -52,6 +52,7 @@ export default function Home() {
     <div className="App">
       <ScrollProgress />
 
+      <main>
       {/* Hero */}
       <HeroSimple />
 
@@ -102,6 +103,7 @@ export default function Home() {
 
       {/* FAQ (scalone z Objection Handling) */}
       <FAQ />
+      </main>
 
       <Footer />
       <CTAButton />

@@ -16,12 +16,12 @@ const PossibilityInWorld: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Liczby
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
             To nie jest teoria.
-            <span className="block italic text-paulina-accent font-normal">To działa teraz.</span>
+            <span className="block italic text-paulina-accent-text font-normal">To działa teraz.</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
             Metoda małych kroków + systematyczność = wyniki, które były niemożliwe 5 lat temu.
@@ -77,7 +77,7 @@ const PossibilityInWorld: React.FC = () => {
                 </p>
               </div>
               <h4 className="font-bold text-lg mb-3">
-                20 minut dziennie przez 6-8 miesięcy
+                20 minut dziennie przez 7-9 miesięcy
               </h4>
               <p className="text-white/85 leading-relaxed">
                 Mózg ma czas na zrozumienie. Wiedza buduje się powoli, ale zostaje na lata. Większość uczniów po roku pamięta więcej niż ci, którzy wkuwali.

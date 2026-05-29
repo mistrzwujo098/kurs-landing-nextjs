@@ -117,7 +117,7 @@ const CourseContent: React.FC = () => {
   const additionalContent = [
     { icon: Smartphone, title: 'Aplikacja na smartfony', description: 'Możesz przyjść z dowolnym zadaniem matematycznym, z którym masz problem.', value: '797 zł' },
     { icon: Video, title: 'Ponad 60 lekcji video', description: 'Masz do nich dostęp 24/7.', value: '997 zł' },
-    { icon: Book, title: '1000 zadań z rozwiązaniami', description: 'Strategicznie dopasowane, by ułatwić zrozumienie tematu.', value: '200 zł' },
+    { icon: Book, title: 'Ponad 1500 zadań z rozwiązaniami', description: 'Strategicznie dopasowane, by ułatwić zrozumienie tematu.', value: '200 zł' },
     { icon: Users, title: 'Grupa kursantów', description: 'W każdej chwili możesz zadać pytanie anonimowo i szybko dostać odpowiedź.', value: '300 zł' },
     { icon: Shield, title: '30-dniowa gwarancja zwrotu', description: 'Bezwarunkowa gwarancja - bez pytań, bez tłumaczeń.', value: 'Bezcenne' },
     { icon: Brain, title: 'Dla rodziców', description: '5 spotkań o stresie z psycholożką, specjalnie dla rodziców ósmoklasistów.', value: '500 zł' },
@@ -127,7 +127,7 @@ const CourseContent: React.FC = () => {
     <section id="course-content" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-14 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Program
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-4 tracking-tight">
@@ -203,13 +203,17 @@ const CourseContent: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
-                  className={`h-1 rounded-full transition-all ${
-                    index === currentImageIndex
-                      ? 'bg-paulina-accent w-8'
-                      : 'bg-gray-300 hover:bg-gray-400 w-2'
-                  }`}
+                  className="min-w-[24px] min-h-[24px] flex items-center justify-center"
                   aria-label={`Zdjęcie ${index + 1}`}
-                />
+                >
+                  <span
+                    className={`block h-1 rounded-full transition-all ${
+                      index === currentImageIndex
+                        ? 'bg-paulina-accent w-8'
+                        : 'bg-gray-300 hover:bg-gray-400 w-2'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
             <p className="text-center mt-4 text-sm text-gray-500">

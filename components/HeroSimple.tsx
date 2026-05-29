@@ -15,7 +15,7 @@ const HeroSimple: React.FC = () => {
   const daysToExam = Math.max(0, Math.ceil((new Date('2026-05-12').getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)));
 
   return (
-    <section id="hero" className="relative bg-[#fbf9f7] pt-20 pb-16 px-4 sm:px-6 md:px-4 overflow-hidden">
+    <section id="hero" className="relative bg-[#fbf9f7] pt-12 md:pt-20 pb-16 px-4 sm:px-6 md:px-4 overflow-hidden">
       {/* Subtelny akcent tła - pojedyncze ciepłe światło, zamiast 3-kolorowego gradientu */}
       <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[80%] bg-paulina-bg-yellow/40 rounded-full blur-[120px] pointer-events-none" />
 
@@ -24,26 +24,26 @@ const HeroSimple: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-8 md:gap-16 items-center">
           {/* Lewa kolumna - 7/12 (większa, dominująca typografia) */}
           <div className="md:col-span-7 animate-fade-in-up">
-            {/* Mobile-only avatar nad H1 - powiększony z 100px do 180px dla lepszej widoczności na ATF */}
+            {/* Mobile-only avatar nad H1 - 120px dla lzejszego ATF (CTA blizej folda) */}
             <Image
               src="https://paulinaodmatematyki.com/wp-content/uploads/2025/06/hero-1.webp"
               alt="Paulina, autorka kursu"
-              width={360}
-              height={360}
+              width={240}
+              height={240}
               priority
               unoptimized
-              className="md:hidden w-[180px] h-[180px] object-cover rounded-full mx-auto mb-6 shadow-md"
+              className="md:hidden w-[120px] h-[120px] object-cover rounded-full mx-auto mb-5 shadow-md"
             />
 
             {/* Jeden malutki pretitle zamiast badge z gradientem */}
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-6">
               Program Ósmoklasisty · Edycja 2026/2027
             </p>
 
             {/* Wielki headline z display fontem */}
             <h1 className="font-display text-[clamp(2.5rem,6.5vw,5.5rem)] text-paulina-primary leading-[0.95] mb-8 tracking-tight">
               Egzamin ósmoklasisty.
-              <span className="block italic text-paulina-accent font-normal">
+              <span className="block italic text-paulina-accent-text font-normal">
                 Bez paniki, bez chaosu YouTube, bez korepetytora 70 zł/h.
               </span>
             </h1>
@@ -53,7 +53,7 @@ const HeroSimple: React.FC = () => {
               Średnia krajowa E8 z matematyki 2025: <span className="font-semibold text-paulina-primary">50%</span>, modalna 17% (CKE). Co trzeci ósmoklasista nie zdobył 30%.
             </p>
             <p className="text-lg sm:text-xl text-gray-700 mb-10 max-w-2xl leading-relaxed">
-              Roczny program z metodą LAPS i lekcjami na żywo. <span className="font-semibold text-paulina-accent">20 minut dziennie</span>, przez 7-9 miesięcy. Większość kursantów kończy ze średnią <span className="font-semibold text-paulina-primary">~84%</span>.
+              Roczny program z metodą LAPS i lekcjami na żywo. <span className="font-semibold text-paulina-accent-text">20 minut dziennie</span>, przez 7-9 miesięcy. Średnia kursantów to <span className="font-semibold text-paulina-primary">~84%</span> (z ankiet po otrzymaniu wyniku).
             </p>
 
             {/* CTA + minimalny proof inline */}
@@ -107,7 +107,7 @@ const HeroSimple: React.FC = () => {
               {/* Jedna liczba jako element graficzny - duża typografia zamiast "stat badge" */}
               <div className="absolute -bottom-8 -left-6 bg-white rounded-2xl px-6 py-5 shadow-xl border border-gray-100">
                 <p className="display-numeral text-[5rem] text-paulina-primary">84%</p>
-                <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Średni wynik kursantów</p>
+                <p className="text-xs uppercase tracking-wider text-gray-500 mt-1">Średnia kursantów z ankiet</p>
               </div>
 
               {/* Handwritten note - strzałka do zdjęcia, autorski touch */}

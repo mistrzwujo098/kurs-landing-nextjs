@@ -35,7 +35,7 @@ const ComparisonTable: React.FC = () => {
     <section className="py-20 bg-[#fbf9f7]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Pełne porównanie
           </p>
           <h2 className="font-display text-3xl md:text-5xl text-paulina-primary mb-4 tracking-tight">

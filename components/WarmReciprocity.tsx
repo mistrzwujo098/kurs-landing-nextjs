@@ -70,7 +70,7 @@ export default function WarmReciprocity({ variant, ctaHref = '#pricing', ctaLabe
     <section className="py-12 md:py-16 px-4" style={{ background: '#fbf9f7' }}>
       <div className="max-w-3xl mx-auto">
         <div className="border-l-4 border-paulina-accent pl-6 md:pl-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Dla Was, byłych kursantów
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-paulina-primary mb-6 leading-tight">

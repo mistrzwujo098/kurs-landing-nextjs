@@ -43,10 +43,9 @@ const PricingSimple: React.FC = () => {
         '>60 lekcji video HD',
         '>1500 zadań z rozwiązaniami',
         '9 próbnych arkuszy egzaminacyjnych',
-        '9 spotkań online z rozwiązywaniem',
-        '30 x 90-min spotkań na żywo',
+        '30 x 90-min spotkań na żywo z rozwiązywaniem',
         'Dostęp na 12 miesięcy',
-        'Gwarancja satysfakcji 30 dni',
+        '30 dni gwarancji zwrotu',
         '+ 3 bonusy (591 zł wartości)',
       ],
       notIncluded: [
@@ -108,7 +107,7 @@ const PricingSimple: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-24 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Pakiety
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-4 tracking-tight">
@@ -154,7 +153,7 @@ const PricingSimple: React.FC = () => {
                 </div>
                 <div className="flex items-baseline gap-2 mt-1">
                   <span className="text-xs text-gray-400 line-through">{packages[0].originalPrice} zł</span>
-                  <span className="text-xs text-paulina-accent font-semibold">
+                  <span className="text-xs text-paulina-accent-text font-semibold">
                     −{packages[0].originalPrice - packages[0].price} zł
                   </span>
                 </div>
@@ -195,7 +194,7 @@ const PricingSimple: React.FC = () => {
             </div>
 
             <div className="mb-8 mt-4">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-3">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-3">
                 Polecany dla większości
               </p>
               <h3 className="font-display text-3xl md:text-4xl text-paulina-primary mb-6 tracking-tight">
@@ -211,7 +210,7 @@ const PricingSimple: React.FC = () => {
                 </div>
                 <div className="flex items-baseline gap-2 mt-2">
                   <span className="text-base text-gray-400 line-through">{packages[1].originalPrice} zł</span>
-                  <span className="text-base text-paulina-accent font-semibold">
+                  <span className="text-base text-paulina-accent-text font-semibold">
                     −{packages[1].originalPrice - packages[1].price} zł
                   </span>
                 </div>
@@ -220,7 +219,7 @@ const PricingSimple: React.FC = () => {
               <div className="text-sm text-gray-500 space-y-1 pt-4 border-t border-gray-100">
                 <p>lub <span className="font-semibold text-gray-700">{Math.round(packages[1].price / 10)} zł/mies.</span> (raty Pekao SA: 10x 0% RRSO)</p>
                 <p>lub zapłać za 30 dni z PayPo (bez odsetek)</p>
-                <p className="text-paulina-accent font-semibold">
+                <p className="text-paulina-accent-text font-semibold">
                   to {(packages[1].price / 365).toFixed(2).replace('.', ',')} zł dziennie przez rok
                 </p>
               </div>
@@ -257,7 +256,7 @@ const PricingSimple: React.FC = () => {
               )}
             </button>
 
-            <p className="font-hand text-lg text-paulina-accent text-center mt-5 leading-tight">
+            <p className="font-hand text-lg text-paulina-accent-text text-center mt-5 leading-tight">
               najlepszy stosunek jakości do ceny
             </p>
           </div>
@@ -279,7 +278,7 @@ const PricingSimple: React.FC = () => {
                 </div>
                 <div className="flex items-baseline gap-2 mt-1">
                   <span className="text-xs text-gray-400 line-through">{packages[2].originalPrice} zł</span>
-                  <span className="text-xs text-paulina-accent font-semibold">
+                  <span className="text-xs text-paulina-accent-text font-semibold">
                     −{packages[2].originalPrice - packages[2].price} zł
                   </span>
                 </div>
@@ -318,12 +317,12 @@ const PricingSimple: React.FC = () => {
             Porównanie z korepetycjami
           </p>
           <h3 className="font-display text-3xl text-paulina-primary mb-8 text-center tracking-tight">
-            Mniej niż 2 miesiące&nbsp;korepetycji.
+            Cały rok taniej niż&nbsp;półrocze&nbsp;korepetycji.
           </h3>
           <div className="space-y-3 mb-6 max-w-xl mx-auto">
             <div className="flex items-center justify-between py-2 border-b border-paulina-primary/10">
-              <span className="text-gray-700">Korepetycje (4 mies. × 4h × 150 zł)</span>
-              <span className="font-bold line-through text-gray-400">2 400 zł</span>
+              <span className="text-gray-700">Korepetycje (8 mies. × 4h × 70 zł)</span>
+              <span className="font-bold line-through text-gray-400">2 240 zł</span>
             </div>
             <div className="flex items-center justify-between py-2 border-b border-paulina-primary/10">
               <span className="text-gray-700">Kurs Pauliny (pakiet Standard)</span>
@@ -331,11 +330,14 @@ const PricingSimple: React.FC = () => {
             </div>
             <div className="flex items-center justify-between pt-4">
               <span className="font-bold text-lg text-paulina-primary">Twoja oszczędność</span>
-              <span className="font-display text-4xl text-paulina-accent tracking-tight">
-                {2400 - packages[0].price} zł
+              <span className="font-display text-4xl text-paulina-accent-text tracking-tight">
+                {2240 - packages[0].price} zł
               </span>
             </div>
           </div>
+          <p className="text-xs text-gray-500 text-center max-w-xl mx-auto">
+            Scenariusz szacunkowy przy stawce 70 zł/h online. Indywidualne koszty i wyniki mogą się różnić.
+          </p>
         </div>
       </div>
     </section>

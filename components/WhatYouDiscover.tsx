@@ -7,32 +7,32 @@ const WhatYouDiscover: React.FC = () => {
   const discoveries = [
     {
       icon: Brain,
-      title: "Metodę „Szybkich Ułamków”",
-      description: "która sprawia, że najtrudniejsze działania stają się proste jak dodawanie"
+      title: "Szybkie liczenie na ułamkach",
+      description: "jak rozłożyć najtrudniejsze działania na proste kroki, które dziecko rozumie"
     },
     {
       icon: Zap,
-      title: "Trik „3 Kroki do Procentów”",
-      description: "dzięki któremu każde zadanie z procentami zajmie max 2 minuty"
+      title: "Procenty w 3 krokach",
+      description: "powtarzalny schemat, dzięki któremu zadania z procentami przestają być zagadką"
     },
     {
       icon: Target,
-      title: "System „Pewniaki na Start”",
-      description: "10 typów zadań, które zawsze są na egzaminie (i jak je rozwiązać)"
+      title: "Typy zadań, które wracają na egzaminie",
+      description: "10 typów zadań, które najczęściej są na egzaminie (i jak je rozwiązać)"
     },
     {
       icon: Clock,
-      title: "Technikę „Time-Boxing”",
+      title: "Rozkład czasu na egzaminie",
       description: "jak zarządzać czasem na egzaminie, żeby starczyło na sprawdzenie"
     },
     {
       icon: Trophy,
-      title: "Algorytm „Zero Błędów”",
-      description: "sprawdzony sposób na unikanie głupich pomyłek (strata 20% punktów)"
+      title: "Sprawdzanie bez głupich pomyłek",
+      description: "sprawdzony sposób na wyłapanie błędów rachunkowych przed oddaniem arkusza"
     },
     {
       icon: Shield,
-      title: "Metodę „Anty-Stres”",
+      title: "Spokój zamiast stresu na egzaminie",
       description: "3 techniki oddechowe, które działają nawet podczas egzaminu"
     },
     {
@@ -48,8 +48,8 @@ const WhatYouDiscover: React.FC = () => {
   ];
 
   const extras = [
-    { icon: FileText, text: '10 arkuszy egzaminacyjnych' },
-    { icon: Target, text: '1000+ zadań z rozwiązaniami' },
+    { icon: FileText, text: '9 próbnych arkuszy egzaminacyjnych' },
+    { icon: Target, text: 'ponad 1500 zadań z rozwiązaniami' },
     { icon: Video, text: '60+ lekcji video HD' },
     { icon: Smartphone, text: 'Aplikacja mobilna' },
     { icon: Users, text: 'Grupa wsparcia' },
@@ -59,14 +59,14 @@ const WhatYouDiscover: React.FC = () => {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             W kursie
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
-            Co <span className="italic text-paulina-accent font-normal">dokładnie</span> odkryje Twoje&nbsp;dziecko
+            Co <span className="italic text-paulina-accent-text font-normal">dokładnie</span> odkryje Twoje&nbsp;dziecko
           </h2>
           <p className="text-lg text-gray-600">
-            Oto część z 67 technik, które sprawiają, że uczniowie mówią: <em>„Czemu nikt wcześniej mi tego nie pokazał?”</em>
+            Oto część metod, które sprawiają, że uczniowie mówią: <em>„Czemu nikt wcześniej mi tego nie pokazał?”</em>
           </p>
         </div>
 

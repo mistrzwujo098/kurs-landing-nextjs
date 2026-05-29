@@ -28,7 +28,7 @@ export default function QualifierGate({ onShowFullPage, courseType }: QualifierG
       <div className="max-w-4xl w-full">
         {/* Header */}
         <div className="text-center mb-14 md:mb-16">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Chwila
           </p>
           <h1 className="font-display text-4xl md:text-6xl text-paulina-primary mb-5 tracking-tight leading-[1]">
@@ -94,7 +94,7 @@ export default function QualifierGate({ onShowFullPage, courseType }: QualifierG
               <div className="w-11 h-11 rounded-xl border border-paulina-accent/30 flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-paulina-accent" />
               </div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text">
                 Minikursy
               </span>
             </div>

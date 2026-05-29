@@ -21,7 +21,7 @@ const WhosItFor: React.FC = () => {
     <section className="py-20 md:py-24 bg-[#fbf9f7]">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-14 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Dla kogo
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-4 tracking-tight">

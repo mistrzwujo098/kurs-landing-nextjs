@@ -12,7 +12,7 @@ const Problems: React.FC = () => {
         'Nieefektywne metody uczenia się',
         'Problemy z organizacją materiału',
         'Narastający stres i presja',
-        'Konflikty rodzic-dziecko o naukę',
+        'Wieczorne siedzenie nad zadaniami bez efektu',
         'Brak systematyczności',
         'Marnowanie czasu na złe metody',
         'Rosnąca frustracja',
@@ -41,8 +41,7 @@ const Problems: React.FC = () => {
         'Rozczarowanie wynikiem',
         'Żal do siebie i innych',
         'Stracone szanse',
-        'Gorszy start w liceum',
-        'Nadszarpnięte relacje w rodzinie'
+        'Gorszy start w liceum'
       ]
     }
   ];
@@ -51,14 +50,14 @@ const Problems: React.FC = () => {
     <section id="problems" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14 max-w-2xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent mb-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-paulina-accent-text mb-4">
             Diagnoza
           </p>
           <h2 className="font-display text-4xl md:text-5xl text-paulina-primary mb-5 tracking-tight">
-            Czy Twoje dziecko też <span className="italic text-paulina-accent font-normal">to&nbsp;ma</span>?
+            Czy Twoje dziecko też <span className="italic text-paulina-accent-text font-normal">to&nbsp;ma</span>?
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Większość rodziców nie umie pomóc dziecku z matematyką. Każdy dzień zwlekania to większy stres przed egzaminem.
+            Matematyka zmieniła się od czasów naszej szkoły, więc to zupełnie normalne, że ciężko pomóc dziecku. Każdy dzień zwlekania to większy stres przed egzaminem.
           </p>
         </div>
 
